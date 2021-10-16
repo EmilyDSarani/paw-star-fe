@@ -1,0 +1,9 @@
+.Header {
+  padding: 20px;
+  border-bottom: 1px solid lightgray;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: bold;
+}
