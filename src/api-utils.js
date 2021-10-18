@@ -38,7 +38,7 @@ export async function createPet(pet, token) {
 //delete pet
 export async function deletePet(id, token) {
   const response = await request
-    .delete(`${URL}/api/pets/${id}`)
+    .delete(`${URL}api/pets/${id}`)
     .set('Authorization', token);
   return response.body;
 }
@@ -60,21 +60,21 @@ export async function updatePet(id, update, token) {
 //get sign
 export async function getSign(birthday){
   const response = await request 
-    .get(`${URL}/sign?date=${birthday}`);
+    .get(`${URL}sign?date=${birthday}`);
   return response.body;
 }
 
 //get horoscope
 export async function getHoroscope(sign){
   const response = await request 
-    .post(`${URL}/horoscope?sign=${sign}`);
+    .post(`${URL}horoscope?sign=${sign}`);
   return response.body;
 }
 
 //yet yelp data
 export async function getYelpData(location){
   const response = await request 
-    .get(`${URL}/yelp?location=${location}`);
+    .get(`${URL}yelp?location=${location}`);
   return response.body;
 }
 

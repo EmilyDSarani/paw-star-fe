@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { signUp } from '../api-utils';
+import { getSign, signUp } from '../api-utils';
 export default class SignUp extends Component {
     state = {
       password: '',
@@ -13,12 +13,18 @@ export default class SignUp extends Component {
 
     handleSignUp = async e => {
       e.preventDefault();
+
+      //take the submitted birthday as YYYY-MM-DD and give it to our getSign function
+      const sign = await getSign(this.state.birthday);
+      console.log(sign);
+      //store the sign in state, so that we can give to our signUp function
+      await this.setState({ sign });
+
       try {
         const { token } = await signUp(this.state.email, this.state.password, this.state.sign, this.state.zipcode);
         this.props.handleTokenChange(token);
-          //fill in redirect to add a pet 
 
-        this.props.history.push('/addpet');
+        // this.props.history.push('/addpet');
       }
       catch (e) {
         this.setState({ error: e.response.body.error });
@@ -29,8 +35,6 @@ export default class SignUp extends Component {
     }
       
     render() {
-
-
       return (
         <div>
           <form className="signup-form" onSubmit={this.handleSignUp}>
