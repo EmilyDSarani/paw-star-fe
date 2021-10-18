@@ -91,7 +91,7 @@ render() {
                 <AboutUs {...routerProps}/>
               )}
             />
-            <Route path="signup" exact={true}
+            <Route path="/signup" exact={true}
               render={routerProps => (
                 <SignUp
                   handleTokenChange={this.handleTokenChange}
