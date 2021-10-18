@@ -5,6 +5,8 @@ export default class HomePage extends Component {
   state = {
     password: '',
     email: '',
+    sign: '',
+    zipcode: '',
     error: ''
   }
 
@@ -12,7 +14,7 @@ export default class HomePage extends Component {
   handleSignUp = async e => {
     e.preventDefault();
     try {
-      const { token } = await signUp(this.state.email, this.state.password);
+      const { token } = await signUp(this.state.email, this.state.password, this.state.sign, this.state.zipcode);
       this.props.handleTokenChange(token);
       //fill in redirect to add a pet 
     }
