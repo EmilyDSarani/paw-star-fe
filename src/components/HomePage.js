@@ -48,13 +48,13 @@ export default class HomePage extends Component {
   //ADD LOGIN FORM WITH NOTE - new here? create your profile (link to sign up page)
   render() {
     return (
-      <div>
+      <div className="homepage-container">
         <form onSubmit={this.handleLogIn}>
           
-          <h3>login</h3>
+          <h2>Login</h2>
 
           <label>
-            <p>email:</p>
+            Email
             <input 
               value={this.state.email}
               onChange={(e) => this.setState({ email: e.target.value })}
@@ -62,15 +62,15 @@ export default class HomePage extends Component {
           </label>
 
           <label>
-            <p> password:</p>
+            Password
             <input 
               value={this.state.password}
               onChange={(e) => this.setState({ password: e.target.value })}
               type="password"/>
           </label>
 
-          <button>login</button>
-          <Link to='/signup'>new here? create a profile</Link>
+          <button>Login</button>
+          <Link to='/signup'>New here? Create a profile</Link>
         </form>
       </div>
     );
