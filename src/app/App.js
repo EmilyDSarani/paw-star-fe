@@ -17,56 +17,86 @@ import AboutUs from '../components/AboutUs';
 // Pet Form
 //PHG
 // About Us
-class App extends Component {
-
-  render() {
-    return (
-      <div className="App">
-        <Router>
-          <header>
-            <h1>Paw-Star</h1>
-            <nav>
-              <NavLink exact activeClassName='active' to ='/'>Home</NavLink>
-              <NavLink exact activeClassName='active' to ='/addpet'>Add Your Pet</NavLink>
-              <NavLink exact activeClassName='active' to ='/gallery'>Gallery</NavLink>
-              <NavLink exact activeClassName='active' to ='/aboutus'>About the Team</NavLink>
-            </nav>
-          </header>
-          <main>
-
-            <Switch>
-              <Route path="/" exact={true}
-                render={routerProps => (
-                  <HomePage {...routerProps}/>
-                )}
-              />
-
-              <Route path="/addpet" exact={true}
-                render={routerProps => (
-                  <AddPet {...routerProps}/>
-                )}
-              />
-              <Route path="/gallery" exact={true}
-                render={routerProps => (
-                  <Gallery {...routerProps}/>
-                )}
-              />
-              <Route path="/aboutus" exact={true}
-                render={routerProps => (
-                  <AboutUs {...routerProps}/>
-                )}
-              />
-
-              <Redirect to="/" />
-
-            </Switch>
-          </main>
-          <Footer/>
-        </Router>
-      </div>
-    );
+export default class App extends Component {
+  state = {
+    token: localStorage.getItem('TOKEN') || ''
   }
+
+handleTokenChange = token => {
+  localStorage.setItem('TOKEN', token);
+  this.setState({ token: token });
+}
+
+logout = () => {
+  localStorage.clear();
+  this.setState({ token: '' });
+}
+
+render() {
+  return (
+    <div className="App">
+      <Router>
+        <header>
+          <h1>Paw-Star</h1>
+          <nav>
+            <NavLink exact activeClassName='active' to ='/'>Home</NavLink>
+            <NavLink exact activeClassName='active' to ='/addpet'>Add Pet</NavLink>
+            <NavLink exact activeClassName='active' to ='/gallery'>Gallery</NavLink>
+            <NavLink exact activeClassName='active' to ='/aboutus'>About</NavLink>
+            {this.state.token && <span className='logout' onClick={this.logout}>Logout</span>}
+
+          </nav>
+        </header>
+        <main>
+
+          <Switch>
+            <Route path="/" exact={true}
+              render={routerProps => (
+                <HomePage 
+                  handleTokenChange={this.handleTokenChange}
+                  {...routerProps}/>
+              )}
+            />
+
+            <Route path="/addpet" exact={true}
+              render={routerProps => 
+                  //if there is a token
+                this.state.token ?
+                  //pass the token to addpet
+                  <AddPet
+                    token={this.state.token}
+                    {...routerProps}/>
+                  //else redirect to signup (homepage)
+                  : <Redirect to='/'/>
+              }
+            />
+            <Route 
+              path="/gallery" 
+              exact={true}
+              render={routerProps => 
+                  //if there is a token
+                this.state.token ?
+                  //pass the token to the gallery page
+                  <Gallery 
+                    token={this.state.token}
+                    {...routerProps}/>
+                  //else redirect to signup (homepage)
+                  : <Redirect to='/'/>
+              }
+            />
+            <Route path="/aboutus" exact={true}
+              render={routerProps => (
+                <AboutUs {...routerProps}/>
+              )}
+            />
+          </Switch>
+        </main>
+        <Footer/>
+      </Router>
+    </div>
+  );
+}
 
 }
 
-export default App;
+// export default App;
