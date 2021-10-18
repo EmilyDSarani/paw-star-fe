@@ -3,10 +3,10 @@ import request from 'superagent';
 const URL = 'https://shielded-savannah-39977.herokuapp.com/';
 
 //sign up
-export async function signUp(email, password) {
+export async function signUp(email, password, sign, zipcode) {
   const response = await request 
     .post(`${URL}auth/signup`)
-    .send({ 'email': email, 'password': password });
+    .send({ email, password, sign, zipcode });
   return response.body;
 }
 
