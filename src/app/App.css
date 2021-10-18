@@ -1,9 +1,30 @@
-.App {
-  height: 100vh;
-  display: grid;
-  grid-template-rows: auto 1fr auto;
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime&family=PT+Sans&family=Playfair+Display&display=swap');
+
+:root {
+  --black: #000000ff;
+  --oxford-blue: #14213dff;
+  --orange-web: #fca311ff;
+  --platinum: #e5e5e5ff;
+  --white: #ffffffff;
+  --monospace: 'Courier Prime', monospace;
+  --serif: 'Playfair Display', serif;
+  --sans-serif: 'PT Sans', sans-serif;
 }
 
+nav {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--black);
+}
+
+.active {
+  font-weight: bolder;
+}
 main {
   background: #FAF0EA;
 }
