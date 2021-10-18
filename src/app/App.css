@@ -4,11 +4,27 @@
   --black: #000000ff;
   --oxford-blue: #14213dff;
   --orange-web: #fca311ff;
+  --orange-web-text: rgb(250, 183, 75);
   --platinum: #e5e5e5ff;
   --white: #ffffffff;
   --monospace: 'Courier Prime', monospace;
   --serif: 'Playfair Display', serif;
   --sans-serif: 'PT Sans', sans-serif;
+}
+
+.App {
+  background-color: var(--platinum);
+  display: flex;
+  flex-direction: column;
+  font-family: var(--serif);
+}
+
+header {
+  background-color: var(--oxford-blue);
+  color: var(--orange-web-text);
+  padding-left: 5px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 nav {
@@ -19,13 +35,24 @@ nav {
 
 nav a {
   text-decoration: none;
-  color: var(--black);
+  color: var(--orange-web-text);
+}
+
+nav >*:hover {
+  transform: scale(102%);
 }
 
 .active {
   font-weight: bolder;
 }
-main {
-  background: #FAF0EA;
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 
