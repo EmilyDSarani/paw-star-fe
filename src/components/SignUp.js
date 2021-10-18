@@ -6,7 +6,9 @@ export default class SignUp extends Component {
       email: '',
       sign: '',
       zipcode: '',
-      error: ''
+      error: '',
+      birthday: ''
+     
     }
 
     handleSignUp = async e => {
@@ -15,6 +17,8 @@ export default class SignUp extends Component {
         const { token } = await signUp(this.state.email, this.state.password, this.state.sign, this.state.zipcode);
         this.props.handleTokenChange(token);
           //fill in redirect to add a pet 
+
+        this.props.history.push('/addpet');
       }
       catch (e) {
         this.setState({ error: e.response.body.error });
@@ -25,9 +29,29 @@ export default class SignUp extends Component {
     }
       
     render() {
+
+
       return (
         <div>
-                
+          <form className="signup-form" onSubmit={this.handleSignUp}>
+            <label>Email
+              <input required value={this.state.email} onChange={(e) => this.setState({ email: e.target.value })} type='email' />
+            </label>
+
+            <label>Password
+              <input required value={this.state.password} onChange={(e) => this.setState({ password: e.target.value })} type='password' />
+            </label>
+            <label>Zipcode
+              <input required value={this.state.zipcode} onChange={(e) => this.setState({ zipcode: e.target.value })} type='zipcode' />
+            </label>
+            <label>birthday
+              <input required value={this.state.birthday} onChange={(e) => this.setState({ birthday: e.target.value })} type='date' />
+            </label>
+            <button>
+                Submit!
+            </button>
+          </form>
+          
         </div>
       );
     }
