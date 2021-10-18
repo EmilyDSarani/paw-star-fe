@@ -1,6 +1,4 @@
 import { Component } from 'react';
-
-import Footer from './Footer';
 import {
   BrowserRouter as Router,
   Route,
@@ -100,7 +98,7 @@ render() {
             />
           </Switch>
         </main>
-        <Footer/>
+        
       </Router>
     </div>
   );

@@ -29,19 +29,19 @@ export default class AddPet extends Component {
 
   render() {
     return (
-      <div>
+      <div className="addpet-container">
         <form className="addpet-form" onSubmit={this.handleSubmit}>
           <label>
-            Name: <input value={this.state.name} onChange={(e) => this.setState({ name:e.target.value })} type='text'/>
+            Name <input value={this.state.name} onChange={(e) => this.setState({ name:e.target.value })} type='text'/>
           </label>
           <label>
-            Birthday: <input value={this.state.birthday} onChange={(e) => this.setState({ birthday:e.target.value })}type ='date'/>
+            Birthday <input value={this.state.birthday} onChange={(e) => this.setState({ birthday:e.target.value })}type ='date'/>
           </label>
           <select onChange={this.handleSelect}>
             <option value="dog">Dog</option>
             <option value="cat">Cat</option>
           </select>
-          <button>Add my Fur-Baby!</button>
+          <button>Add Pet</button>
         </form>     
       </div>
     );
