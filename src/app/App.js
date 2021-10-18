@@ -13,6 +13,7 @@ import HomePage from '../components/HomePage';
 import AddPet from '../components/AddPet';
 import Gallery from '../components/Gallery';
 import AboutUs from '../components/AboutUs';
+import SignUp from '../components/SignUp';
 // Sign
 // Pet Form
 //PHG
@@ -43,6 +44,7 @@ render() {
             <NavLink exact activeClassName='active' to ='/addpet'>Add Pet</NavLink>
             <NavLink exact activeClassName='active' to ='/gallery'>Gallery</NavLink>
             <NavLink exact activeClassName='active' to ='/aboutus'>About</NavLink>
+            <NavLink exact activeClassName='active' to ='/signup'>Sign Up</NavLink>
             {this.state.token && <span className='logout' onClick={this.logout}>Logout</span>}
 
           </nav>
@@ -87,6 +89,13 @@ render() {
             <Route path="/aboutus" exact={true}
               render={routerProps => (
                 <AboutUs {...routerProps}/>
+              )}
+            />
+            <Route path="signup" exact={true}
+              render={routerProps => (
+                <SignUp
+                  handleTokenChange={this.handleTokenChange}
+                  {...routerProps}/>
               )}
             />
           </Switch>
