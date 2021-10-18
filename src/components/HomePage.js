@@ -70,10 +70,8 @@ export default class HomePage extends Component {
           </label>
 
           <button>login</button>
-
+          <Link to='/signup'>new here? create a profile</Link>
         </form>
-
-        <Link to='/signup'>new here? create a profile</Link>
       </div>
     );
   }
