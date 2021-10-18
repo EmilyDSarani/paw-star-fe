@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { signUp, logIn } from '../api-utils.js';
+import { Link } from 'react-router-dom';
 
 export default class HomePage extends Component {
   state = {
@@ -32,8 +33,9 @@ export default class HomePage extends Component {
     try {
       const { token } = await logIn(this.state.email, this.state.password);
       this.props.handleTokenChange(token);
-      //fill in redirect to gallery 
+      this.props.history.push('/gallery');
     }
+
     catch (e) {
       this.setState({ error: e.response.body.error });
       this.state.error === 'email and password required' && alert('Please provide both an email and password.');
@@ -47,10 +49,31 @@ export default class HomePage extends Component {
   render() {
     return (
       <div>
-        <form>
+        <form onSubmit={this.handleLogIn}>
           
+          <h3>login</h3>
+
+          <label>
+            <p>email:</p>
+            <input 
+              value={this.state.email}
+              onChange={(e) => this.setState({ email: e.target.value })}
+              type="email"/>
+          </label>
+
+          <label>
+            <p> password:</p>
+            <input 
+              value={this.state.password}
+              onChange={(e) => this.setState({ password: e.target.value })}
+              type="password"/>
+          </label>
+
+          <button>login</button>
+
         </form>
-                
+
+        <Link to='/signup'>new here? create a profile</Link>
       </div>
     );
   }
