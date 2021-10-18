@@ -44,7 +44,7 @@ export async function deletePet(id, token) {
 }
 
 
-//update pet...update is an object {name: blah, birthday:blah}
+//update pet...update is an object {name: blah, sign:blah}
 export async function updatePet(id, update, token) {
   const response = await request
     .put(`${URL}api/pets/${id}`)
@@ -52,7 +52,7 @@ export async function updatePet(id, update, token) {
     .send({
       'id': id,
       'name': update.name,
-      'birthday': update.birthday
+      'sign': update.sign
     });
   return response.body;
 }
