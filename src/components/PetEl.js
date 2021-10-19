@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { getHoroscope } from '../api-utils.js';
-import { compMessage } from '../utils.js';
+import { compMessage, signArticle } from '../utils.js';
 export default class PetEl extends Component {
   state = {
     horoscope: ''
@@ -16,7 +16,9 @@ export default class PetEl extends Component {
     const hData = this.state.horoscope;
     const userSign = localStorage.getItem('USERSIGN');
     const compatibilityMessage = compMessage(userSign, this.props.sign);
-    console.log(userSign, this.props.sign);
+    // const article = signArticle(this.props.sign);
+    // const bffArticle = signArticle(hData.compatibility);
+    console.log(typeof hData.compatibility, typeof this.props.sign);
     return (
       <div className="pet-el">
         <img src={`../Icons/Pets/${this.props.type}.png`} id='img' alt={this.props.type} />
