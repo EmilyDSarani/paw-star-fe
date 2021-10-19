@@ -23,7 +23,7 @@ export default class SignUp extends Component {
       try {
         const { token } = await signUp(this.state.email, this.state.password, this.state.sign, this.state.zipcode);
         this.props.handleTokenChange(token);
-
+        this.props.handleUserLsData(this.state.sign, this.state.zipcode);
         // this.props.history.push('/addpet');
       }
       catch (e) {
@@ -36,7 +36,7 @@ export default class SignUp extends Component {
       
     render() {
       return (
-        <div>
+        <div className="signup-container">
           <form className="signup-form" onSubmit={this.handleSignUp}>
             <label>Email
               <input required value={this.state.email} onChange={(e) => this.setState({ email: e.target.value })} type='email' />
@@ -48,11 +48,11 @@ export default class SignUp extends Component {
             <label>Zipcode
               <input required value={this.state.zipcode} onChange={(e) => this.setState({ zipcode: e.target.value })} type='zipcode' />
             </label>
-            <label>birthday
+            <label>Birthday
               <input required value={this.state.birthday} onChange={(e) => this.setState({ birthday: e.target.value })} type='date' />
             </label>
             <button>
-                Submit!
+                Submit
             </button>
           </form>
           

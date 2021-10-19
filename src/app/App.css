@@ -13,7 +13,7 @@
 }
 
 .App {
-  background-color: var(--platinum);
+  background-color: var(--white);
   display: flex;
   flex-direction: column;
   font-family: var(--serif);
@@ -55,5 +55,32 @@ form {
   align-items: center;
   padding-top: 15px;
   padding-bottom: 15px;
+}
+.about-container{
+display: flex;
+flex-direction: column;
+height: 100%;
+gap: 15px;
+padding-left: 30px;
+padding-right: 30px;
+padding-top: 20px;
+}
+.about-container img{
+  width: 31%;
+  height: 31%;
+  object-fit: cover;
+
+}
+h2{
+  font-family: var(--sans-serif);
+}
+.team-member{
+  background-color: var(--white);
+  display: flex;
+  flex-direction: row;
+  gap: 17px;
+  font-size: small;
+  font-family: var(--monospace);
+  align-items: center;
 }
 
