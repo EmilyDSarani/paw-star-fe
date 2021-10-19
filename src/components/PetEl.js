@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { getHoroscope } from '../api-utils.js';
-
 export default class PetEl extends Component {
   state = {
     horoscope: ''
@@ -11,16 +10,16 @@ export default class PetEl extends Component {
     await this.setState({ horoscope });
   }
 
+   
   render() {
     const hData = this.state.horoscope;
     console.log(hData, this.props.type);
     return (
       <div className="pet-el">
-        {this.props.type === 'dog' ? <img src='../Icons/Pets/dog.png' alt='dog'/> : <img src='../Icons/Pets/cat.png' alt='cat'/>
-        }
+        <img src={`../Icons/Pets/${this.props.type}.png`} id='img' alt={this.props.type} />
         <h2>{this.props.name}</h2>
         {/* <div className="zodiac"> */}
-        <img className='paws' src='../Icons/ZodiacRep2/capricorn.png' alt='capricorn'/>
+        <img className='paws' src={`../Icons/ZodiacRep2/${this.props.sign}.png`} id='img' alt={this.props.sign}/>
         <h3>{this.props.name} is a {this.props.sign}</h3>
         {/* </div> */}
         <p>Mood: {hData.mood}</p>
