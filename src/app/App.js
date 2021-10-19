@@ -18,7 +18,9 @@ import SignUp from '../components/SignUp';
 // About Us
 export default class App extends Component {
   state = {
-    token: localStorage.getItem('TOKEN') || ''
+    token: localStorage.getItem('TOKEN') || '',
+    userSign: localStorage.getItem('USERSIGN') || '',
+    userZip: localStorage.getItem('USERZIP') || ''
   }
 
 handleTokenChange = token => {
@@ -26,9 +28,21 @@ handleTokenChange = token => {
   this.setState({ token: token });
 }
 
+handleUserLsData = (sign, zipcode) => {
+  localStorage.setItem('USERSIGN', sign);
+  localStorage.setItem('USERZIP', zipcode);
+  // this.setState({
+  //   userSign: sign,
+  //   userZip: zipcode
+  // });
+}
+
 logout = () => {
   localStorage.clear();
-  this.setState({ token: '' });
+  this.setState({ 
+    token: '',
+    userSign: '',
+    userZip: '' });
 }
 
 render() {
@@ -54,6 +68,7 @@ render() {
               render={routerProps => (
                 <HomePage 
                   handleTokenChange={this.handleTokenChange}
+                  handleUserLsData={this.handleUserLsData}
                   {...routerProps}/>
               )}
             />
@@ -78,6 +93,8 @@ render() {
                 this.state.token ?
                   //pass the token to the gallery page
                   <Gallery 
+                    userSign={this.state.userSign}
+                    userZip={this.state.userZip}
                     token={this.state.token}
                     {...routerProps}/>
                   //else redirect to signup (homepage)
@@ -93,6 +110,7 @@ render() {
               render={routerProps => (
                 <SignUp
                   handleTokenChange={this.handleTokenChange}
+                  handleUserLsData={this.handleUserLsData}
                   {...routerProps}/>
               )}
             />
