@@ -7,9 +7,9 @@ import {
   NavLink
 } from 'react-router-dom';
 import './App.css';
-import HomePage from '../components/HomePage';
-import AddPet from '../components/AddPet';
-import Gallery from '../components/Gallery';
+import Login from '../components/Login';
+import Pets from '../components/Pets';
+import Pawstrology from '../components/Pawstrology';
 import AboutUs from '../components/AboutUs';
 import SignUp from '../components/SignUp';
 // Sign
@@ -52,9 +52,9 @@ render() {
         <header>
           <h1>Paw-Star</h1>
           <nav>
-            <NavLink exact activeClassName='active' to ='/'>Home</NavLink>
-            <NavLink exact activeClassName='active' to ='/addpet'>Add Pet</NavLink>
-            <NavLink exact activeClassName='active' to ='/gallery'>Gallery</NavLink>
+            <NavLink exact activeClassName='active' to ='/'>Login</NavLink>
+            <NavLink exact activeClassName='active' to ='/pets'>Pets</NavLink>
+            <NavLink exact activeClassName='active' to ='/pawstrology'>Pawstrology</NavLink>
             <NavLink exact activeClassName='active' to ='/aboutus'>About</NavLink>
             <NavLink exact activeClassName='active' to ='/signup'>Sign Up</NavLink>
             {this.state.token && <span className='logout' onClick={this.logout}>Logout</span>}
@@ -66,19 +66,19 @@ render() {
           <Switch>
             <Route path="/" exact={true}
               render={routerProps => (
-                <HomePage 
+                <Login 
                   handleTokenChange={this.handleTokenChange}
                   handleUserLsData={this.handleUserLsData}
                   {...routerProps}/>
               )}
             />
 
-            <Route path="/addpet" exact={true}
+            <Route path="/pets" exact={true}
               render={routerProps => 
                   //if there is a token
                 this.state.token ?
                   //pass the token to addpet
-                  <AddPet
+                  <Pets
                     token={this.state.token}
                     {...routerProps}/>
                   //else redirect to signup (homepage)
@@ -86,13 +86,13 @@ render() {
               }
             />
             <Route 
-              path="/gallery" 
+              path="/pawstrology" 
               exact={true}
               render={routerProps => 
                   //if there is a token
                 this.state.token ?
                   //pass the token to the gallery page
-                  <Gallery 
+                  <Pawstrology 
                     userSign={this.state.userSign}
                     userZip={this.state.userZip}
                     token={this.state.token}

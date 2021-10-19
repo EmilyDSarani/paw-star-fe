@@ -20,7 +20,7 @@ export default class HomePage extends Component {
       this.props.handleTokenChange(token);
       // console.log(sign, zipcode);
       this.props.handleUserLsData(sign, zipcode);
-      this.props.history.push('/gallery');
+      this.props.history.push('/pawstrology');
     }
 
     catch (e) {
