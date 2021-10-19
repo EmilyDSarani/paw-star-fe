@@ -86,3 +86,28 @@ h2{
   align-items: center;
 }
 
+.pet-el {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  /* border: 1px dotted gray;
+  padding: 15px; */
+}
+
+.pet-el img {
+  width: 100px;
+}
+
+.pet-el .paws {
+  width: 50px;
+}
+
+/* .zodiac {
+  border: 1px dotted black;
+} */
+
+.yelp-container {
+  margin-top: 20px;
+  border: 1px dotted black;
+}

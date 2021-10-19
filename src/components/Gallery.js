@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PetEl from './PetEl.js';
 import { getPets } from '../api-utils.js';
+import YelpRecs from './YelpRecs.js';
 
 export default class Gallery extends Component {
   state = {
@@ -19,7 +20,9 @@ export default class Gallery extends Component {
         {
           petsArray.map(pet => <PetEl key={pet.id} {...pet} />)
         }
-        
+        <div className='yelp-container'>
+          <YelpRecs/>
+        </div>
       </div>
     );
   }
