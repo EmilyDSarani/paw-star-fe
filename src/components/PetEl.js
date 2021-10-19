@@ -16,19 +16,20 @@ export default class PetEl extends Component {
     const hData = this.state.horoscope;
     const userSign = localStorage.getItem('USERSIGN');
     const compatibilityMessage = compMessage(userSign, this.props.sign);
-    const article = signArticle(this.props.sign);
-    const bffArticle = signArticle(hData.compatibility);
+    // const article = signArticle(this.props.sign);
+    // const bffArticle = signArticle(hData.compatibility);
+    console.log(typeof hData.compatibility, typeof this.props.sign);
     return (
       <div className="pet-el">
         <img src={`../Icons/Pets/${this.props.type}.png`} id='img' alt={this.props.type} />
         <h2>{this.props.name}</h2>
         {/* <div className="zodiac"> */}
         <img className='paws' src={`../Icons/ZodiacRep2/${this.props.sign}.png`} id='img' alt={this.props.sign}/>
-        <h3>{this.props.name} is `${article}` {this.props.sign}</h3>
+        <h3>{this.props.name} is a {this.props.sign}</h3>
         {/* </div> */}
         <p>Mood: {hData.mood}</p>
         <p>Color: {hData.color}</p>
-        <p>{this.props.name}'s BFF today is `${bffArticle}` {hData.compatibility}.</p>
+        <p>{this.props.name}'s BFF today is a {hData.compatibility}.</p>
         <img className='paws' src='../Icons/Pets/paws.png' alt='paw'/>
         <h3>What {this.props.name} is paw-ndering today:</h3>
         <p>{hData.description}</p>
