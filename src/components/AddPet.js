@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { createPet, getPets, getSign } from '../api-utils';
+import { createPet, getSign } from '../api-utils';
 // will need a handle submit
 //will need a form 
 // will need a dropdown for dog and cat
