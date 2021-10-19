@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Courier+Prime&family=PT+Sans&family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
 
 :root {
   --black: #000000ff;
@@ -10,13 +11,14 @@
   --monospace: 'Courier Prime', monospace;
   --serif: 'Playfair Display', serif;
   --sans-serif: 'PT Sans', sans-serif;
+  --serif2: 'EB Garamond', serif;
 }
 
 .App {
   background-color: var(--white);
   display: flex;
   flex-direction: column;
-  font-family: var(--serif);
+  font-family: var(--serif2);
 }
 
 header {
