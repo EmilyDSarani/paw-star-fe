@@ -10,7 +10,14 @@ export function compMessage(userSign, petSign) {
 
 
 //Take in a string an if the string is Aries || Aquarius; make 'a' 'an'
+export function signArticle(sign) {
 
+  let article = '';
+  String(sign) === 'Aries' || 'Aquarius' ?
+    article = 'an' :
+    article = 'a';
+  return article; 
+}
 
 
 //yelp function TBD
