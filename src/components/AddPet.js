@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { createPet } from '../api-utils';
+import { createPet, getSign } from '../api-utils';
 // will need a handle submit
 //will need a form 
 // will need a dropdown for dog and cat
@@ -9,9 +9,14 @@ export default class AddPet extends Component {
     birthday: '',
     type: '',
     sign: '',
+    pets: []
   }
   handleSubmit = async e =>{
     e.preventDefault();
+
+    const sign = await getSign(this.state.birthday);
+    await this.setState({ sign });
+
     const newPet = {
       name: this.state.name,
       sign: this.state.sign,
@@ -19,7 +24,8 @@ export default class AddPet extends Component {
     };
     // console.log(newPet);
     await createPet(newPet, this.props.token);
-    this.props.history.push ('/gallery');
+
+    this.props.history.push('/gallery');
   }
 
   handleSelect = async e => {
@@ -37,7 +43,9 @@ export default class AddPet extends Component {
           <label>
             Birthday <input value={this.state.birthday} onChange={(e) => this.setState({ birthday:e.target.value })}type ='date'/>
           </label>
-          <select onChange={this.handleSelect}>
+          <select 
+            required onChange={this.handleSelect}>
+            <option value="">Pet Type</option>
             <option value="dog">Dog</option>
             <option value="cat">Cat</option>
           </select>
