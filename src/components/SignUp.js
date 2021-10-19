@@ -24,7 +24,7 @@ export default class SignUp extends Component {
         const { token } = await signUp(this.state.email, this.state.password, this.state.sign, this.state.zipcode);
         this.props.handleTokenChange(token);
         this.props.handleUserLsData(this.state.sign, this.state.zipcode);
-        // this.props.history.push('/addpet');
+        this.props.history.push('/addpet');
       }
       catch (e) {
         this.setState({ error: e.response.body.error });
