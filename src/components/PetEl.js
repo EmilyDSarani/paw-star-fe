@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { getHoroscope } from '../api-utils.js';
-import { compMessage, signArticle } from '../utils.js';
+import { compMessage } from '../utils.js';
 export default class PetEl extends Component {
   state = {
     horoscope: ''
