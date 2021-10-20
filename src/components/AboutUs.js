@@ -13,18 +13,24 @@ export default class AboutUs extends Component {
         </div>
         <hr></hr>
         <div className="team-member">
-          <p>My name is Diyana. I'm a Software Engineer and this is my adorable pet is Tucker. A great Dane mixed with lab.
-          He's extremely active and loves to meet new people. 
-          </p> <img src='../Icons/SignSymbols/pisces.png' alt="Elijah Prosperie and his dog Tucker."/>
+          <p>I'm Diyana, a full stack dev/full-on Pisces based in Portland, Oregon. My dog is a Capricorn Shiba Inu named Blitz. You know she likes you if she greets you with a push. 
+          </p> <img src='../Icons/SignSymbols/pisces.png' alt="pisces"/>
         </div>
         <hr></hr>
         <div className="team-member">
+<<<<<<< HEAD
           <img src='../Icons/SignSymbols/sagittarius.png' alt="Elijah Prosperie and his dog Tucker."/>
           <p>My name is Elijah. I'm a Software Engineer. I have had multiple cat's throughout my life and now I currently have two dogs.
+=======
+          <img src='../Icons/SignSymbols/sagittarius.png' alt="sagittarius"/>
+          <p>My name is Elijah. I'm a Software Engineer and this is my adorable pet is Tucker. A great Dane mixed with lab.
+          He's extremely active and loves to meet new people. 
+          </p>
+>>>>>>> eeb93dc8fcaf1e66d8cb8568d4aa8b508958a967
         </div>
         <hr></hr>
         <div className="team-member">
-          <p>My name is Katie, and I'm a Full-Stack Software Developer. I'm a Cancer, and my cat Gigi is a Taurus. We're both home-bodies who want nothing more than a cozy snuggle at all times.
+          <p>My name is Katie - and aside from being a full stack developer, I'm also a Cancer. My cat Gigi is a Taurus, and we're both home-bodies who want nothing more than to cozy up for a snuggle.
           </p> 
           <img src='../Icons/misc/ritual.png' alt="katie's other form"/>
         </div>
