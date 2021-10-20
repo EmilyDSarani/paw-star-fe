@@ -17,11 +17,6 @@ export default class PetEl extends Component {
     const userSign = localStorage.getItem('USERSIGN');
     const compatibilityMessage = compMessage(userSign, hData.compatibility);
 
-
-      // .filter(quote => quote.author !== 'Donald Trump');
-    // console.log(typeof quotes);
-    // const article = signArticle(this.props.sign);
-    // const bffArticle = signArticle(hData.compatibility);
     return (
       <div className="pet-el">
         <img src={`../Icons/Pets/${this.props.type}.png`} id='img' alt={this.props.type} />

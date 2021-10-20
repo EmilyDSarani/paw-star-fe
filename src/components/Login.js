@@ -11,14 +11,11 @@ export default class HomePage extends Component {
     error: ''
   }
 
-
-  //login submit
   handleLogIn = async e => {
     e.preventDefault();
     try {
       const { token, sign, zipcode } = await logIn(this.state.email, this.state.password);
       this.props.handleTokenChange(token);
-      // console.log(sign, zipcode);
       this.props.handleUserLsData(sign, zipcode);
       this.props.history.push('/pawstrology');
     }
@@ -33,10 +30,10 @@ export default class HomePage extends Component {
 
   render() {
     return (
-      <div className="homepage-container">
+      <div className="login-container">
         <form onSubmit={this.handleLogIn}>
           
-          <h2>Login</h2>
+          <h3>Welcome back</h3>
 
           <label>
             Email

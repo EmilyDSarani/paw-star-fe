@@ -37,6 +37,10 @@ export default class SignUp extends Component {
     render() {
       return (
         <div className="signup-container">
+          <div className="welcome">
+            <h3>Welcome</h3>
+            <p>Please provide your information below to enter the Pawstrology universe.</p>
+          </div>
           <form className="signup-form" onSubmit={this.handleSignUp}>
             <label>Email
               <input required value={this.state.email} onChange={(e) => this.setState({ email: e.target.value })} type='email' />
@@ -45,11 +49,12 @@ export default class SignUp extends Component {
             <label>Password
               <input required value={this.state.password} onChange={(e) => this.setState({ password: e.target.value })} type='password' />
             </label>
-            <label>Zipcode
+            <label>Current Zipcode
               <input required value={this.state.zipcode} onChange={(e) => this.setState({ zipcode: e.target.value })} type='zipcode' />
             </label>
             <label>Your Birthday
               <input required value={this.state.birthday} onChange={(e) => this.setState({ birthday: e.target.value })} type='date' />
+              <p>(You'll enter your pet information next)</p>
             </label>
             <button>
                 Submit

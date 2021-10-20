@@ -294,3 +294,34 @@ button:active, button:hover {
     align-items: center;
   }
   
+  /*SIGNUP page styles*/
+.signup-container {
+  margin-top: 30px;
+}
+
+.welcome {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+
+}
+
+.welcome p {
+  font-family: var(--serif2);
+  margin-top: 10px;
+  text-align: center;
+  line-height: normal;
+}
+
+.signup-form p {
+  font-family: var(--serif2);
+  margin-top: 10px;
+  text-align: center;
+}
+
+  /*LOGIN page styles*/
+.login-container a {
+  color: black;
+}

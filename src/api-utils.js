@@ -91,5 +91,3 @@ export async function getRandomWords(){
     .get(`${URL}randomwordlist`);
   return response.body;
 }
-
-//add stuff for getting and updating PS user profile info (name, location, birthday, sign)
