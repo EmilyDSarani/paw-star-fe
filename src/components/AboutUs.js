@@ -25,7 +25,7 @@ export default class AboutUs extends Component {
         </div>
         <hr></hr>
         <div className="team-member">
-          <p>My name is Katie, and I'm a Full-Stack Software Developer. I'm a Cancer, and my cat Gigi is a Taurus. We're both home-bodies who want nothing more than a cozy snuggle at all times.
+          <p>My name is Katie - and aside from being a full stack developer, I'm also a Cancer. My cat Gigi is a Taurus, and we're both home-bodies who want nothing more than to cozy up for a snuggle.
           </p> 
           <img src='../Icons/misc/ritual.png' alt="katie's other form"/>
         </div>
