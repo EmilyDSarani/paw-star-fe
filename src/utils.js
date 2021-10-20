@@ -28,5 +28,5 @@ export function findBusiness(array, type) {
 export function getRandomQuote(array) {
   const alphabet = 'abcdefghijklmnopqrstuvwxyz';
   const randomCharacter = alphabet[Math.floor(Math.random() * alphabet.length)];
-  return array.find(quote => quote.text.includes(randomCharacter));
+  return array.find(quote => quote.text.includes(randomCharacter) && quote.author !== 'Donald Trump');
 }
