@@ -20,7 +20,7 @@ export default class Gallery extends Component {
         {
           petsArray.map(pet => <PetEl key={pet.id} {...pet} />)
         }
-        <div className='yelp-container'>
+        <div>
           <YelpRecs/>
         </div>
       </div>

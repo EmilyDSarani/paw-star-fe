@@ -12,10 +12,7 @@ import Pets from '../components/Pets';
 import Pawstrology from '../components/Pawstrology';
 import AboutUs from '../components/AboutUs';
 import SignUp from '../components/SignUp';
-// Sign
-// Pet Form
-//PHG
-// About Us
+
 export default class App extends Component {
   state = {
     token: localStorage.getItem('TOKEN') || '',
@@ -31,10 +28,6 @@ handleTokenChange = token => {
 handleUserLsData = (sign, zipcode) => {
   localStorage.setItem('USERSIGN', sign);
   localStorage.setItem('USERZIP', zipcode);
-  // this.setState({
-  //   userSign: sign,
-  //   userZip: zipcode
-  // });
 }
 
 logout = () => {
@@ -52,11 +45,11 @@ render() {
         <header>
           <h1>Paw-Star</h1>
           <nav>
-            <NavLink exact activeClassName='active' to ='/'>Login</NavLink>
+            {!this.state.token && <NavLink exact activeClassName='active' to ='/'>Login</NavLink>}
             <NavLink exact activeClassName='active' to ='/pets'>Pets</NavLink>
             <NavLink exact activeClassName='active' to ='/pawstrology'>Pawstrology</NavLink>
             <NavLink exact activeClassName='active' to ='/aboutus'>About</NavLink>
-            <NavLink exact activeClassName='active' to ='/signup'>Sign Up</NavLink>
+            {!this.state.token && <NavLink exact activeClassName='active' to ='/signup'>Sign Up</NavLink>}
             {this.state.token && <span className='logout' onClick={this.logout}>Logout</span>}
 
           </nav>

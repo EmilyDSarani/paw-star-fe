@@ -18,28 +18,32 @@ export default class PetEl extends Component {
     const compatibilityMessage = compMessage(userSign, this.props.sign);
     // const article = signArticle(this.props.sign);
     // const bffArticle = signArticle(hData.compatibility);
-    console.log(typeof hData.compatibility, typeof this.props.sign);
     return (
       <div className="pet-el">
         <img src={`../Icons/Pets/${this.props.type}.png`} id='img' alt={this.props.type} />
-        <h2>{this.props.name}</h2>
+        <h2>{this.props.name} is a {this.props.sign}</h2>
         {/* <div className="zodiac"> */}
-        <img className='paws' src={`../Icons/ZodiacRep2/${this.props.sign}.png`} id='img' alt={this.props.sign}/>
-        <h3>{this.props.name} is a {this.props.sign}</h3>
+        {/* <h3>is a {this.props.sign}</h3> */}
+
         {/* </div> */}
+        <hr></hr>
+        <img className='smaller-images' src={`../Icons/ZodiacRep2/${this.props.sign}.png`} id='img' alt={this.props.sign}/>
+        <h3>Today</h3>
         <p>Mood: {hData.mood}</p>
         <p>Color: {hData.color}</p>
-        <p>{this.props.name}'s BFF today is a {hData.compatibility}.</p>
-        <img className='paws' src='../Icons/Pets/paws.png' alt='paw'/>
+        <p>{this.props.name}'s BFF is a {hData.compatibility}.</p>
+        <hr></hr>
+        <img className='smaller-images' src='../Icons/Pets/paws.png' alt='paw'/>
         <h3>What {this.props.name} is paw-ndering today:</h3>
         <p>{hData.description}</p>
-
-
-        <img className='paws' src='../Icons/Pets/bell.png' alt='paw'/>
+        <hr></hr>
+        <img className='smaller-images' src='../Icons/Pets/bell.png' alt='paw'/>
         <h3>Your day together</h3>
         <p>{compatibilityMessage}</p>
-
-
+        <hr></hr>
+    
+        <h3>Do | Don't</h3>
+        <p>Placeholder text for dos and don'ts. Needs to be restructured into columns</p>
       </div>
     );
   }

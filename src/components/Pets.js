@@ -74,29 +74,16 @@ export default class AddPet extends Component {
           {
             petsArray.length === 0 ? <p>No pets to display. Please add a pet.</p> : 
               petsArray.map(pet => 
-                <div key={pet.id}> 
-                  <p> {pet.name} </p>
-                  <p>{pet.sign}</p>
-
-                  <button onClick={() => this.handleDelete(pet.id)}>Delete</button>
-
-                  {/* <button onClick={this.handleUpdateClick && this.setState({ petToUpdate: pet.id })}>Update</button> */}
-      
-                  {/* <form className="update-form" style={this.state.hideUpdateForm ? { display: 'none' } : {}} onSubmit={() => this.handleUpdate(pet.id)}>
-                  <label>
-            Name <input defaultValue={pet.name} onChange={(e) => this.setState({ nameUpdate:e.target.value })} type='text'/>
-                  </label>
-                  <label>
-            Birthday <input onChange={(e) => this.setState({ birthdayUpdate:e.target.value })}type ='date'/>
-                  </label>
-                  <button>Submit Update</button>
-                </form> */}
+                <div className="one-pet" key={pet.id}> 
+                  <img src={`../Icons/Pets/${pet.type}.png`} id='img' alt={pet.type} />
+                  <p> {pet.name} | {pet.sign}</p>
+                  <button className="delete-button" onClick={() => this.handleDelete(pet.id)}>Delete</button>
                 </div>
-              
               )
           }
 
         </div>
+        <img src="../Icons/Pets/pet-bowl.png" alt="pet bowl" />
         <div className="addpet-container">
           <h3>Add a Pet</h3>
           <form className="addpet-form" onSubmit={this.handleSubmit}>

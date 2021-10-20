@@ -14,14 +14,42 @@
   --serif2: 'EB Garamond', serif;
 }
 
-.App {
+/* .App {
   background-color: var(--white);
   display: flex;
   flex-direction: column;
   font-family: var(--serif2);
+} */
+
+h1 {
+  font-family: var(--serif2);
+  font-size: larger;
+  font-weight: bolder;
+  color: var(--platinum)
 }
 
+h2 {
+  font-family: var(--serif2);
+  font-weight: bolder;
+  font-size: 1.5em;
+}
+
+h3 {
+  font-family: var(--serif2);
+  font-weight: bolder;
+  font-size: 1em;
+}
+
+p {
+  font-family: var(--sans-serif); 
+  font-size: .9em;
+}
+
+
 header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background-color: var(--oxford-blue);
   color: var(--orange-web-text);
   padding-left: 5px;
@@ -30,9 +58,15 @@ header {
 }
 
 nav {
+  padding: 10px;
   display: flex;
   flex-direction: row;
+  justify-content: center;
   gap: 10px;
+  font-family: 'PT Sans', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: .1rem;
+  font-size: .8em;
 }
 
 nav a {
@@ -49,6 +83,10 @@ nav >*:hover {
   font-weight: bolder;
 }
 
+.logout {
+  cursor: pointer;
+}
+
 form {
   display: flex;
   flex-direction: column;
@@ -58,6 +96,7 @@ form {
   padding-top: 15px;
   padding-bottom: 15px;
 }
+
 .about-container{
 display: flex;
 flex-direction: column;
@@ -67,15 +106,14 @@ padding-left: 30px;
 padding-right: 30px;
 padding-top: 20px;
 }
+
 .about-container img{
   width: 31%;
   height: 31%;
   object-fit: cover;
 
 }
-h2{
-  font-family: var(--sans-serif);
-}
+
 .team-member{
   background-color: var(--white);
   display: flex;
@@ -86,31 +124,134 @@ h2{
   align-items: center;
 }
 
-.pet-el {
+.gallery-container {
+  margin-top: 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 15px;
-  /* border: 1px dotted gray;
-  padding: 15px; */
+}
+
+.pet-el {
+  border: 1px solid var(--platinum);
+  border-radius: 5px;
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  padding: 20px;
 }
 
 .pet-el img {
   width: 100px;
 }
 
-.pet-el .paws {
+.pet-el .smaller-images {
   width: 50px;
 }
 
-/* .zodiac {
-  border: 1px dotted black;
-} */
-
 .yelp-container {
-  margin-top: 20px;
-  border: 1px dotted black;
+  border: 1px solid var(--platinum);
+  border-radius: 5px;
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  gap: 15px;
+  padding: 20px;
 }
-.yelp-container img{
-  width:100px;
+
+.yelp-container img {
+  width: 80px;
+}
+
+.pets-container {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.pets-container img {
+  width: 100px;
+}
+
+.pets-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.one-pet {
+  border: 1px solid var(--platinum);
+  border-radius: 5px;
+  width: 250px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.addpet-container {
+  border: 1px solid var(--platinum);
+  border-radius: 5px;
+  /* width: 250px; */
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.addpet-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+button {
+  font-family: 'PT Sans', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: .1rem;
+  padding: 5px;
+  background-color: white;
+  border: 1px solid var(--platinum);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:active, button:hover {
+  background-color: var(--oxford-blue);
+  color: white
+}
+
+.delete-button {
+  margin-top: 15px;
+}
+
+select {
+  font-family: 'Playfair Display', serif;
+}
+
+input {
+  margin-left: 10px;
+}
+
+input:focus {
+  outline: none;
+}
+
+label {
+  font-family: var(--serif2);
+}
+
+hr {
+  border: 1px dotted var(--platinum);
+  width: 100%;
 }
