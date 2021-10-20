@@ -8,7 +8,7 @@ export default class AboutUs extends Component {
         <div className="team-member">
          
           <img src='../Icons/ZodiacRep2/cancer.png' alt="Chibi Cancer Horoscope Sign."/>
-          <p>My name is Sarani. I'm a Software Engineer and my sign is Cancer. My dog, Presley, is an Aries. Presley and I have already started to form a deep bond once we established that we were on the same side, making us pretty compatible. 
+          <p>My name is Sarani. I'm a Software Engineer and my sign is Cancer. Presley is a schnauzer, and also an Aries. He is a quiet, alert little guy who bumps into every corner. 
           </p>
         </div>
         <hr></hr>
