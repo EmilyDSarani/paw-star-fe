@@ -43,7 +43,8 @@ render() {
     <div className="App">
       <Router>
         <header>
-          <h1>Paw-Star</h1>
+          <div className="logo">
+            <h1>Paw—Star</h1></div>
           <nav>
             {!this.state.token && <NavLink exact activeClassName='active' to ='/'>Login</NavLink>}
             <NavLink exact activeClassName='active' to ='/pets'>Pets</NavLink>
