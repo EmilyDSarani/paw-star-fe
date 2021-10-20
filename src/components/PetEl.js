@@ -1,14 +1,18 @@
 import React, { Component } from 'react';
-import { getHoroscope } from '../api-utils.js';
+import { getHoroscope, getQuoteList } from '../api-utils.js';
 import { compMessage } from '../utils.js';
 export default class PetEl extends Component {
   state = {
-    horoscope: ''
+    horoscope: '',
+    quotes: []
   }
 
   componentDidMount = async () => {
     const horoscope = await getHoroscope(this.props.sign);
     await this.setState({ horoscope });
+
+    const quotes = await getQuoteList();
+    await this.setState({ quotes });
   }
 
    
@@ -16,12 +20,22 @@ export default class PetEl extends Component {
     const hData = this.state.horoscope;
     const userSign = localStorage.getItem('USERSIGN');
     const compatibilityMessage = compMessage(userSign, this.props.sign);
+    const quotes = this.state.quotes;
+      // .filter(quote => quote.author !== 'Donald Trump');
+    console.log(quotes);
     // const article = signArticle(this.props.sign);
     // const bffArticle = signArticle(hData.compatibility);
     return (
       <div className="pet-el">
         <img src={`../Icons/Pets/${this.props.type}.png`} id='img' alt={this.props.type} />
         <h2>{this.props.name} is a {this.props.sign}</h2>
+
+        <p>{quotes.text}</p>
+        {/* <div className="zodiac"> */}
+        {/* <h3>is a {this.props.sign}</h3> */}
+
+        {/* </div> */}
+
         <hr></hr>
         <img className='smaller-images' src={`../Icons/ZodiacRep2/${this.props.sign}.png`} id='img' alt={this.props.sign}/>
         <h3>Today</h3>
