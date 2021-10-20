@@ -34,7 +34,7 @@ export default class YelpRecs extends Component {
   
   render() {
     const park = this.state.park;
-    const photography = this.state.photography;
+    // const photography = this.state.photography;
     const groomer = this.state.groomer;
     
     return (
