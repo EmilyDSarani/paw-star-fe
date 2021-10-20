@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Loader from 'react-loader-spinner';
 import PetEl from './PetEl.js';
 import { getPets, getQuoteList } from '../api-utils.js';
 import YelpRecs from './YelpRecs.js';
@@ -8,12 +9,15 @@ export default class Gallery extends Component {
   state = {
     pets: [],
     quotes: [],
-    quote: ''
+    quote: '',
+    isLoading: false
   }
 
   componentDidMount = async () => {
+    this.setState({ isLoading: true });
+
     const pets = await getPets(this.props.token);
-    await this.setState({ pets });
+    await this.setState({ pets, isLoading: false });
 
     const quotes = await getQuoteList();
     await this.setState({ quotes });
@@ -24,11 +28,14 @@ export default class Gallery extends Component {
   render() {
     const petsArray = this.state.pets;
     const quote = this.state.quote;
-
+    // console.log(this.state.isLoading);
     return (
       <div className="gallery-container">
+        
         {
-          petsArray.map(pet => <PetEl key={pet.id} {...pet} />)
+          this.state.isLoading ?
+            <Loader type="Circles" color="black" height={100} width={100} /> :
+            petsArray.map(pet => <PetEl key={pet.id} {...pet} />)
         }
         <div>
           <YelpRecs/>
