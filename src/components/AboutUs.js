@@ -13,13 +13,12 @@ export default class AboutUs extends Component {
         </div>
         <hr></hr>
         <div className="team-member">
-          <p>My name is Diyana. I'm a Software Engineer and this is my adorable pet is Tucker. A great Dane mixed with lab.
-          He's extremely active and loves to meet new people. 
-          </p> <img src='../Icons/SignSymbols/pisces.png' alt="Elijah Prosperie and his dog Tucker."/>
+          <p>I'm Diyana, a full stack dev/full-on Pisces based in Portland, Oregon. My dog is a Capricorn Shiba Inu named Blitz. You know she likes you if she greets you with a push. 
+          </p> <img src='../Icons/SignSymbols/pisces.png' alt="pisces"/>
         </div>
         <hr></hr>
         <div className="team-member">
-          <img src='../Icons/SignSymbols/sagittarius.png' alt="Elijah Prosperie and his dog Tucker."/>
+          <img src='../Icons/SignSymbols/sagittarius.png' alt="sagittarius"/>
           <p>My name is Elijah. I'm a Software Engineer and this is my adorable pet is Tucker. A great Dane mixed with lab.
           He's extremely active and loves to meet new people. 
           </p>
