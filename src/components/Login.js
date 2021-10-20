@@ -55,7 +55,7 @@ export default class HomePage extends Component {
           </label>
 
           <button>Login</button>
-          <Link to='/signup'>New here? Create a profile</Link>
+          <p><Link to='/signup'>New here? Create a profile</Link></p>
         </form>
       </div>
     );
