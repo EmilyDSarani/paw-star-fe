@@ -193,6 +193,11 @@ button:active, button:hover {
   gap: 10px;
 }
 
+.yelp-rec a {
+  font-family: var(--sans-serif);
+  color: black;
+}
+
 .dos-donts {
   display: grid;
   grid-template-columns: 1fr 1fr;
