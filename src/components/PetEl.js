@@ -59,11 +59,11 @@ export default class PetEl extends Component {
         <div className="dos-donts">
           <div className="do-column">
             <h3>Do</h3>
-            {doList.map(word => <p>{word.word}</p>)}
+            {doList.map(word => <p key={word.word}>{word.word}</p>)}
           </div>
           <div className="dont-column">
             <h3>Don't</h3>
-            {dontList.map(word => <p>{word.word}</p>)}
+            {dontList.map(word => <p key={word.word}>{word.word}</p>)}
           </div>
         </div>
       </div>
