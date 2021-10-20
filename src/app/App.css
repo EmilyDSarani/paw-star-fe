@@ -230,17 +230,20 @@ button:active, button:hover {
 .about-container{
   display: flex;
   flex-direction: column;
-  height: 100%;
+  width: 250px;
   gap: 15px;
-  padding-left: 30px;
-  padding-right: 30px;
-  padding-top: 20px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--platinum);
+  border-radius: 5px;
+  padding: 25px;
+  margin-top: 30px;
+
   }
   
   .about-container img{
-    width: 31%;
-    height: 31%;
-    object-fit: cover;
+    width: 50px;
+    /* height: 25px; */
   
   }
   
@@ -251,6 +254,13 @@ button:active, button:hover {
     gap: 17px;
     font-size: small;
     font-family: var(--monospace);
+    align-items: center;
+    line-height: normal;
+  }
+
+  main{
+    display: flex;
+    flex-direction: column;
     align-items: center;
   }
   
