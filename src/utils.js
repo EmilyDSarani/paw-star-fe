@@ -1,5 +1,4 @@
 //Take in User and Pet signs and return a message of compatibility.
-
 export function compMessage(userSign, petSign) {
   let message = '';
   String(userSign) === String(petSign) ? 
@@ -18,8 +17,6 @@ export function compMessage(userSign, petSign) {
 //   return article; 
 // }
 
-
-//yelp function TBD
 
 export function findBusiness(array, type) {
   return array.find(business => business.category.find(category => category.alias === type));

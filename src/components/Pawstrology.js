@@ -4,6 +4,7 @@ import PetEl from './PetEl.js';
 import { getPets, getQuoteList } from '../api-utils.js';
 import YelpRecs from './YelpRecs.js';
 import { getRandomQuote } from '../utils.js';
+
 export default class Gallery extends Component {
   state = {
     pets: [],
