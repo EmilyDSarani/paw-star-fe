@@ -14,13 +14,7 @@
   --serif2: 'EB Garamond', serif;
 }
 
-/* .App {
-  background-color: var(--white);
-  display: flex;
-  flex-direction: column;
-  font-family: var(--serif2);
-} */
-
+/*global styles*/
 h1 {
   font-family: var(--serif2);
   font-size: larger;
@@ -97,39 +91,52 @@ form {
   padding-bottom: 15px;
 }
 
-.about-container{
-display: flex;
-flex-direction: column;
-height: 100%;
-gap: 15px;
-padding-left: 30px;
-padding-right: 30px;
-padding-top: 20px;
+select {
+  font-family: 'Playfair Display', serif;
 }
 
-.about-container img{
-  width: 31%;
-  height: 31%;
-  object-fit: cover;
-
+input {
+  margin-left: 10px;
 }
 
-.team-member{
-  background-color: var(--white);
-  display: flex;
-  flex-direction: row;
-  gap: 17px;
-  font-size: small;
-  font-family: var(--monospace);
-  align-items: center;
+input:focus {
+  outline: none;
 }
 
+label {
+  font-family: var(--serif2);
+}
+
+hr {
+  border: 1px dotted var(--platinum);
+  width: 100%;
+}
+
+button {
+  font-family: 'PT Sans', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: .1rem;
+  padding: 5px;
+  background-color: white;
+  border: 1px solid var(--platinum);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:active, button:hover {
+  background-color: var(--oxford-blue);
+  color: white
+}
+
+
+/*PAWSTROLOGY page styles*/
 .gallery-container {
   margin-top: 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 15px;
+  margin-bottom: 30px;
 }
 
 .pet-el {
@@ -167,6 +174,7 @@ padding-top: 20px;
   width: 80px;
 }
 
+/*PETS page styles*/
 .pets-container {
   margin-top: 30px;
   display: flex;
@@ -201,7 +209,6 @@ padding-top: 20px;
 .addpet-container {
   border: 1px solid var(--platinum);
   border-radius: 5px;
-  /* width: 250px; */
   padding: 10px;
   display: flex;
   flex-direction: column;
@@ -215,43 +222,35 @@ padding-top: 20px;
   align-items: center;
 }
 
-button {
-  font-family: 'PT Sans', sans-serif;
-  text-transform: uppercase;
-  letter-spacing: .1rem;
-  padding: 5px;
-  background-color: white;
-  border: 1px solid var(--platinum);
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-button:active, button:hover {
-  background-color: var(--oxford-blue);
-  color: white
-}
-
 .delete-button {
   margin-top: 15px;
 }
 
-select {
-  font-family: 'Playfair Display', serif;
-}
-
-input {
-  margin-left: 10px;
-}
-
-input:focus {
-  outline: none;
-}
-
-label {
-  font-family: var(--serif2);
-}
-
-hr {
-  border: 1px dotted var(--platinum);
-  width: 100%;
-}
+/*ABOUT page styles*/
+.about-container{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  gap: 15px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 20px;
+  }
+  
+  .about-container img{
+    width: 31%;
+    height: 31%;
+    object-fit: cover;
+  
+  }
+  
+  .team-member{
+    background-color: var(--white);
+    display: flex;
+    flex-direction: row;
+    gap: 17px;
+    font-size: small;
+    font-family: var(--monospace);
+    align-items: center;
+  }
+  
