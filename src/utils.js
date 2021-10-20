@@ -24,3 +24,9 @@ export function compMessage(userSign, petSign) {
 export function findBusiness(array, type) {
   return array.find(business => business.category.find(category => category.alias === type));
 }
+
+export function getRandomQuote(array) {
+  const alphabet = 'abcdefghijklmnopqrstuvwxyz';
+  const randomCharacter = alphabet[Math.floor(Math.random() * alphabet.length)];
+  return array.find(quote => quote.text.includes(randomCharacter));
+}
