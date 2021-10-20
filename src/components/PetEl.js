@@ -29,11 +29,13 @@ export default class PetEl extends Component {
       <div className="pet-el">
         <img src={`../Icons/Pets/${this.props.type}.png`} id='img' alt={this.props.type} />
         <h2>{this.props.name} is a {this.props.sign}</h2>
+
         <p>{quotes.text}</p>
         {/* <div className="zodiac"> */}
         {/* <h3>is a {this.props.sign}</h3> */}
 
         {/* </div> */}
+
         <hr></hr>
         <img className='smaller-images' src={`../Icons/ZodiacRep2/${this.props.sign}.png`} id='img' alt={this.props.sign}/>
         <h3>Today</h3>
@@ -49,9 +51,16 @@ export default class PetEl extends Component {
         <h3>Your day together</h3>
         <p>{compatibilityMessage}</p>
         <hr></hr>
-    
-        <h3>Do | Don't</h3>
-        <p>Placeholder text for dos and don'ts. Needs to be restructured into columns</p>
+        <div className="dos-donts">
+          <div className="do-column">
+            <h3>Do</h3>
+            <p>Trees</p>
+          </div>
+          <div className="dont-column">
+            <h3>Don't</h3>
+            <p>Ketchup</p>
+          </div>
+        </div>
       </div>
     );
   }

@@ -39,37 +39,20 @@ export default class YelpRecs extends Component {
     
     return (
       <div className="yelp-container">
-        <div className="park">
-          <p>An outing is in order.</p>
-          <a href={park.url}> 
-            <img src="../Icons/Pets/map.png" alt="map icon"/>
-            <h3>{park.name}</h3>
-            <p>About {park.distance} mi away</p>
-          </a> 
+        <div className="yelp-rec">
+          <h3>Consider an adventure</h3>
+          <img src="../Icons/Pets/map.png" alt="map icon"/>
+          <h4>{park.name}</h4>
+          <p>About {park.distance} mi away</p>
+          <a href={park.url}>View on Yelp</a> 
         </div>
-       
-        {/* { 
-          this.state.photography && 
-            <div className="photography">
-              <p>An outing is in order.</p>
-              <a href={photography.url}> 
-                <img src="../Icons/Pets/map.png" alt="map icon"/>
-                <h3>{photography.name}</h3>
-                <p>About {photography.distance} mi away</p>
-              </a> 
-            </div>
-        } */}
-        
-        <div className="groomers">
-          <p>A spaw day is in order</p>
-          <a href={groomer.url}> 
-            <img src="../Icons/Pets/nail-file.png" alt="map icon"/>
-            <h3>{groomer.name}</h3>
-            <p>About {groomer.distance} mi away</p>
-          </a> 
-        </div>
-        <div className="adoption">
-
+        <hr/>
+        <div className="yelp-rec">
+          <h3>A spa-w day is in order</h3>
+          <img src="../Icons/Pets/nail-file.png" alt="map icon"/>
+          <h4>{groomer.name}</h4>
+          <p>About {groomer.distance} mi away</p>
+          <a href={groomer.url}>View on Yelp</a> 
         </div>
       </div>
     );
