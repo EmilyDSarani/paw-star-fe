@@ -18,10 +18,8 @@ export default class AboutUs extends Component {
         </div>
         <hr></hr>
         <div className="team-member">
-          <img src='../Icons/SignSymbols/sagittarius.png' alt="sagittarius"/>
-          <p>My name is Elijah. I'm a Software Engineer and this is my adorable pet is Tucker. A great Dane mixed with lab.
-          He's extremely active and loves to meet new people. 
-          </p>
+          <img src='../Icons/SignSymbols/sagittarius.png' alt="Elijah Prosperie and his dog Tucker."/>
+          <p>My name is Elijah. I'm a Software Engineer. I have had multiple cat's throughout my life and now I currently have two dogs.</p>
         </div>
         <hr></hr>
         <div className="team-member">
