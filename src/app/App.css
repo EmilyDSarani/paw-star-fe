@@ -34,21 +34,34 @@ h3 {
   font-size: 1em;
 }
 
+h4 {
+  font-family: var(--monospace);
+  font-size: .9em;
+  text-align: center;
+}
+
 p {
   font-family: var(--sans-serif); 
   font-size: .9em;
 }
 
+.logo {
+  margin-top: 60px;
+}
 
 header {
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/moon2.png");
+  background-size: 50px;
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-position: 50% 10%;
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: var(--oxford-blue);
+  background-color: var(--black);
   color: var(--orange-web-text);
-  padding-left: 5px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding: 10px;
 }
 
 nav {
@@ -164,14 +177,26 @@ button:active, button:hover {
   width: 250px;
   display: flex;
   flex-direction: column;
-  align-content: center;
-  justify-content: center;
   gap: 15px;
   padding: 20px;
 }
 
-.yelp-container img {
-  width: 80px;
+.yelp-rec img {
+  width: 50px;
+}
+
+.yelp-rec {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.dos-donts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
 }
 
 /*PETS page styles*/
