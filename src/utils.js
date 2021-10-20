@@ -20,3 +20,7 @@ export function compMessage(userSign, petSign) {
 
 
 //yelp function TBD
+
+export function findBusiness(array, type) {
+  return array.find(business => business.category.find(category => category.alias === type));
+}
