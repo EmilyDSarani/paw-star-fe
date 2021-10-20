@@ -78,4 +78,18 @@ export async function getYelpData(location){
   return response.body;
 }
 
+//get daily quote list
+export async function getQuoteList(){
+  const response = await request
+    .get(`${URL}dailyquote`);
+  return response.body;
+}
+
+//get random words
+export async function getRandomWords(){
+  const response = await request
+    .get(`${URL}randomwordlist`);
+  return response.body;
+}
+
 //add stuff for getting and updating PS user profile info (name, location, birthday, sign)
