@@ -1,22 +1,37 @@
 import React, { Component } from 'react';
-import { getHoroscope } from '../api-utils.js';
+import { getHoroscope, getRandomWords } from '../api-utils.js';
 import { compMessage } from '../utils.js';
 
 export default class PetEl extends Component {
   state = {
     horoscope: '',
+    words:[],
+    doList:[],
+    dontList:[] 
   }
 
   componentDidMount = async () => {
     const horoscope = await getHoroscope(this.props.sign);
     await this.setState({ horoscope });
+
+    const words = await getRandomWords();
+    await this.setState({ words });
+
+    const doList = words.slice(0, 2);
+    await this.setState({ doList });
+
+    const dontList = words.slice(-2);
+    await this.setState({ dontList });
+
   }
+
 
   render() {
     const hData = this.state.horoscope;
     const userSign = localStorage.getItem('USERSIGN');
     const compatibilityMessage = compMessage(userSign, hData.compatibility);
-
+    const doList = this.state.doList;
+    const dontList = this.state.dontList;
 
       // .filter(quote => quote.author !== 'Donald Trump');
     // console.log(typeof quotes);
@@ -44,11 +59,11 @@ export default class PetEl extends Component {
         <div className="dos-donts">
           <div className="do-column">
             <h3>Do</h3>
-            <p>Trees</p>
+            {doList.map(word => <p>{word.word}</p>)}
           </div>
           <div className="dont-column">
             <h3>Don't</h3>
-            <p>Ketchup</p>
+            {dontList.map(word => <p>{word.word}</p>)}
           </div>
         </div>
       </div>
