@@ -28,6 +28,11 @@ export function getRandomQuote(array) {
   return array.find(quote => quote.text.includes(randomCharacter) && quote.author !== 'Donald Trump');
 }
 
-export function sliceWordList(array){
-  return array.slice(1);
+export function getThreeWords(array){
+  let threeWords = [];
+  for (let i = 0; i <= 2; i++){
+    threeWords.push(array[Math.floor(Math.random() * array.length)]);
+  }
+  return threeWords;
 }
+
