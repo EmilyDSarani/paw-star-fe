@@ -37,6 +37,11 @@
 - [Daily Quote](https://type.fit/api/quotes)
 
 #### Libraries, frameworks, and packages used:
-- React, Netlify, superagent 
+- React
+- React-Router-Dom
+- React-Loader-Spinner
+- React-Hash-Link
+- Netlify
+- superagent 
 
 Icons made by [Icongeek26](https://www.flaticon.com/authors/icongeek26) from https://www.flaticon.com/
