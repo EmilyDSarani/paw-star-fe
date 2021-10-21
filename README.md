@@ -1,4 +1,5 @@
 The name of the project
+We are Paw-Star
 Names of the team members
 A description of the project
 The overall problem domain and how the project solves those problems
