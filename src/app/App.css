@@ -212,6 +212,7 @@ button:active, button:hover {
   letter-spacing: 1px;
   border-radius: 5px;
   text-transform: lowercase;
+  width: 275px;
 }
 
 /*PETS page styles*/
