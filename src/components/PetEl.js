@@ -16,10 +16,14 @@ export default class PetEl extends Component {
 
   componentDidUpdate = async (prevProps) => {
     if (this.props.words.length !== prevProps.words.length) {
-      const threeWordsDo = await getThreeWords(this.props.words);
+      const origArray = this.props.words;
+      const wordArrayOne = origArray.slice(0, Math.floor(origArray.length / 2));
+      const wordArrayTwo = origArray.slice(Math.floor((origArray.length / 2) + 1));
+
+      const threeWordsDo = await getThreeWords(wordArrayOne);
       await this.setState({ threeWordsDo });
   
-      const threeWordsDont = await getThreeWords(this.props.words);
+      const threeWordsDont = await getThreeWords(wordArrayTwo);
       await this.setState({ threeWordsDont });
     }
   }
@@ -30,7 +34,6 @@ export default class PetEl extends Component {
     const compatibilityMessage = compMessage(userSign, hData.compatibility);
     const doList = this.state.threeWordsDo;
     const dontList = this.state.threeWordsDont;
-
     return (
       <div className="pet-el" id={this.props.id}>
         
