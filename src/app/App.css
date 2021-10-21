@@ -237,7 +237,9 @@ button:active, button:hover {
 }
 
 .pets-container img {
-  width: 100px;
+  width: 60px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .pets-list {
