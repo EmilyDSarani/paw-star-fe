@@ -25,17 +25,12 @@ export default class Gallery extends Component {
 
     const quote = await getRandomQuote(this.state.quotes);
     await this.setState({ quote });
-<<<<<<< HEAD
-    
-    console.log(this.state.pets); }
-=======
 
     const allWords = await getRandomWords();
     await this.setState({ allWords });
 
   }
 
->>>>>>> 96fbfcf69cbce197603f5b26f237a85608b06c72
   render() {
     const petsArray = this.state.pets;
     const quote = this.state.quote;

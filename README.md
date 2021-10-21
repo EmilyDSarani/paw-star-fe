@@ -1,5 +1,12 @@
 **Paw-Star**
-{Katie, Elijah, Diyana, Sarani}
+* Katie
+    *
+* Elijah
+    *
+* Diyana
+    *
+* Sarani
+    *
 
 A description of the project
 - Allows the user to create a profile for themselves 
