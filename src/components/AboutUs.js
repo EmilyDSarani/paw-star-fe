@@ -8,7 +8,7 @@ export default class AboutUs extends Component {
         <div className="team-member">
          
           <img src='../Icons/ZodiacRep2/cancer.png' alt="Chibi Cancer Horoscope Sign."/>
-          <p>My name is Sarani. I'm a Software Engineer and my sign is Cancer. Presley is a schnauzer, and also an Aries. He is a quiet, alert little guy who bumps into every corner. 
+          <p>My name is Sarani. I'm a Software Developer and my sign is Cancer. Presley is a schnauzer, and also an Aries. He is a quiet, alert little guy who bumps into every corner. 
           </p>
         </div>
         <hr></hr>
@@ -19,7 +19,7 @@ export default class AboutUs extends Component {
         <hr></hr>
         <div className="team-member">
           <img src='../Icons/SignSymbols/sagittarius.png' alt="Elijah Prosperie and his dog Tucker."/>
-          <p>My name is Elijah. I'm a Software Engineer. I have had multiple cat's throughout my life and now I currently have two dogs.</p>
+          <p>My name is Elijah. I'm a Software Engineer. I have had multiple cats throughout my life and now I currently have two dogs.</p>
         </div>
         <hr></hr>
         <div className="team-member">
