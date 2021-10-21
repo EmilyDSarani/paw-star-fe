@@ -7,8 +7,7 @@ export default class SignUp extends Component {
       sign: '',
       zipcode: '',
       error: '',
-      birthday: ''
-     
+      birthday: ''  
     }
 
     handleSignUp = async e => {
@@ -16,7 +15,6 @@ export default class SignUp extends Component {
 
       //take the submitted birthday as YYYY-MM-DD and give it to our getSign function
       const sign = await getSign(this.state.birthday);
-      console.log(sign);
       //store the sign in state, so that we can give to our signUp function
       await this.setState({ sign });
 
@@ -30,7 +28,6 @@ export default class SignUp extends Component {
         this.setState({ error: e.response.body.error });
         this.state.error === 'email and password required' && alert('Please provide both an email and password.');
         this.state.error === 'email already exists' && alert(`This profile already exists. Please go to login instead or create a new user.`);
-        console.log(this.state.error);
       }
     }
       

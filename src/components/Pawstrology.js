@@ -51,12 +51,15 @@ export default class Gallery extends Component {
           //if not, show this message to the user
               <p className="no-pets-msg">We want to show you pawstrology here, but you haven't added any pets. Please go to <Link to='/pets'>Pets.</Link></p>
         }
+
         <div>
           <YelpRecs/>
         </div>
+
         <div className="quote">
           <p>{quote.text}</p>
         </div>
+        
       </div>
     );
   }
