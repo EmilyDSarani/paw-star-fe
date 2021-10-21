@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { getHoroscope } from '../api-utils.js';
-import { compMessage, getThreeWords } from '../utils.js';
+import { compMessage, getThreeWords, correctArticle } from '../utils.js';
 
 export default class PetEl extends Component {
   state = {
@@ -32,15 +32,15 @@ export default class PetEl extends Component {
     const dontList = this.state.threeWordsDont;
 
     return (
-      <div className="pet-el">
+      <div className="pet-el" id={this.props.id}>
         <img src={`../Icons/Pets/${this.props.type}.png`} id='img' alt={this.props.type} />
-        <h2>{this.props.name} is a {this.props.sign}</h2>
+        <h2>{this.props.name} is {correctArticle(this.props.sign)} {this.props.sign}</h2>
         <hr></hr>
         <img className='smaller-images' src={`../Icons/ZodiacRep2/${this.props.sign}.png`} id='img' alt={this.props.sign}/>
         <h3>Today</h3>
         <p>Mood: {hData.mood}</p>
         <p>Color: {hData.color}</p>
-        <p>{this.props.name}'s BFF is a {hData.compatibility}.</p>
+        <p>{this.props.name}'s BFF is {correctArticle(String(hData.compatibility))} {hData.compatibility}.</p>
         <hr></hr>
         <img className='smaller-images' src='../Icons/Pets/paws.png' alt='paw'/>
         <h3>What {this.props.name} is paw-ndering today:</h3>
