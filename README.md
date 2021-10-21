@@ -1,19 +1,47 @@
-**Paw-Star**
-{Katie, Elijah, Diyana, Sarani}
+# Paw-Star
+### Elijah Prosperie
+- [LinkedIn](https://www.linkedin.com/in/elijahprosperie/)
+- [GitHub](https://github.com/ProsperieEli)
 
-A description of the project
-- Allows the user to create a profile for themselves 
-- Add their pets 
-- Generate daily horoscope for each of those pets
+### Katie Schrattenholzer
+- [LinkedIn](https://www.linkedin.com/in/k-schrattenholzer/)
+- [GitHub](https://github.com/k-schrattenholzer)
 
-The overall problem domain and how the project solves those problems:
-This app gives an easy for users to fine their pet's signs and understand their pet's mood at a glance. 
+### Diyana Mendoza
+- [LinkedIn](https://www.linkedin.com/in/diyana-mendoza-price/)
+- [GitHub](https://github.com/diyanamendoza)
+### Emily Sarani
+- [LinkedIn](https://www.linkedin.com/in/emily-sarani-2b3074135/)
+- [GitHub](https://github.com/EmilyDSarani)
+<br>
+<br>
 
-A list of any libraries, frameworks, or packages that your application requires in order to properly function:
-React, Netlify, superagent 
+### This app gives users a simple and straightforward way to look up their pet's signs and use their daily horoscope to understand their pet's mood at a glance. 
+<br>
 
+#### User Story:
+1. Login, or create a user profile 
+1. Redirect to the Pets page, where pets can be added 
+1. Directed to the paw-strology page to see a list of their pets, with a daily horoscope, mood, and compatibility message for each given pet
 
+#### Endpoints:
+- Get
+- Post
+- Delete
 
+#### API's used:
+- [ZodiacSign](https://rapidapi.com/hajderr/api/zodiac-sign)
+- [Aztro](https://github.com/sameerkumar18/aztro)
+- [Yelp](https://www.yelp.com/developers/documentation/v3)
+- [Data Muse](https://www.datamuse.com/api/)
+- [Daily Quote](https://type.fit/api/quotes)
 
+#### Libraries, frameworks, and packages used:
+- React
+- React-Router-Dom
+- React-Loader-Spinner
+- React-Hash-Link
+- Netlify
+- superagent 
 
-
+Icons made by [Icongeek26](https://www.flaticon.com/authors/icongeek26) from https://www.flaticon.com/
