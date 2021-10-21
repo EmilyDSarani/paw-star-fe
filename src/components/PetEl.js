@@ -1,37 +1,35 @@
 import React, { Component } from 'react';
-import { getHoroscope, getRandomWords } from '../api-utils.js';
-import { compMessage } from '../utils.js';
+import { getHoroscope } from '../api-utils.js';
+import { compMessage, getThreeWords } from '../utils.js';
 
 export default class PetEl extends Component {
   state = {
     horoscope: '',
-    words:[],
-    doList:[],
-    dontList:[] 
+    threeWordsDont:[],
+    threeWordsDo:[] 
   }
 
   componentDidMount = async () => {
     const horoscope = await getHoroscope(this.props.sign);
     await this.setState({ horoscope });
-
-    const words = await getRandomWords();
-    await this.setState({ words });
-
-    const doList = words.slice(0, 2);
-    await this.setState({ doList });
-
-    const dontList = words.slice(-2);
-    await this.setState({ dontList });
-
   }
 
+  componentDidUpdate = async (prevProps) => {
+    if (this.props.words.length !== prevProps.words.length) {
+      const threeWordsDo = await getThreeWords(this.props.words);
+      await this.setState({ threeWordsDo });
+  
+      const threeWordsDont = await getThreeWords(this.props.words);
+      await this.setState({ threeWordsDont });
+    }
+  }
 
   render() {
     const hData = this.state.horoscope;
     const userSign = localStorage.getItem('USERSIGN');
     const compatibilityMessage = compMessage(userSign, hData.compatibility);
-    const doList = this.state.doList;
-    const dontList = this.state.dontList;
+    const doList = this.state.threeWordsDo;
+    const dontList = this.state.threeWordsDont;
 
     return (
       <div className="pet-el">
@@ -55,7 +53,7 @@ export default class PetEl extends Component {
         <div className="dos-donts">
           <div className="do-column">
             <h3>Do</h3>
-            {doList.map(word => <p key={word.word}>{word.word}</p>)}
+            {doList.length && doList.map(word => <p key={word.word}>{word.word}</p>)}
           </div>
           <div className="dont-column">
             <h3>Don't</h3>
