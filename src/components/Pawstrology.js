@@ -28,7 +28,6 @@ export default class Gallery extends Component {
   render() {
     const petsArray = this.state.pets;
     const quote = this.state.quote;
-    // console.log(this.state.isLoading);
     return (
       <div className="gallery-container">
         
