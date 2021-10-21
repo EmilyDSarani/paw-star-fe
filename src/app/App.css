@@ -152,6 +152,16 @@ button:active, button:hover {
   margin-bottom: 30px;
 }
 
+.no-pets-msg {
+  width: 300px;
+  text-align: center;
+  line-height: normal;
+}
+
+.no-pets-msg a {
+  color: black;
+}
+
 .pet-el {
   border: 1px solid var(--platinum);
   border-radius: 5px;
@@ -267,7 +277,11 @@ button:active, button:hover {
 }
 
 .delete-button {
-  margin-top: 15px;
+  margin-top: 5px;
+}
+
+.to-chart {
+  margin-top: 10px;
 }
 
 /*ABOUT page styles*/

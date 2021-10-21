@@ -7,16 +7,12 @@ export function compMessage(userSign, petSign) {
   return message;
 }
 
-
-//Take in a string an if the string is Aries || Aquarius; make 'a' 'an'
-// export function signArticle(sign) {
-
-//   let article = 'a';
-//   sign === 'Aries' || 'Aquarius' &&
-//     article = 'an';
-//   return article; 
-// }
-
+export function correctArticle(sign) {
+  let article = 'a';
+  const startswA = sign.toLowerCase().startsWith('a');
+  if (startswA) article = 'an';
+  return article;
+}
 
 export function findBusiness(array, type) {
   return array.find(business => business.category.find(category => category.alias === type));
