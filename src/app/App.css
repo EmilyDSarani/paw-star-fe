@@ -19,7 +19,8 @@ h1 {
   font-family: var(--serif2);
   font-size: larger;
   font-weight: bolder;
-  color: var(--platinum)
+  color: var(--platinum);
+  letter-spacing: 1px;
 }
 
 h2 {
