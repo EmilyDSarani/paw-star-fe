@@ -8,10 +8,7 @@ export default class AddPet extends Component {
     birthday: '',
     type: '',
     sign: '',
-    pets: [],
-    nameUpdate: '',
-    birthdayUpdate: '',
-    typeUpdate: ''
+    pets: []
   }
 
   componentDidMount= async () => {

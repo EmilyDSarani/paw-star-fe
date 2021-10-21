@@ -19,7 +19,6 @@ export default class HomePage extends Component {
       this.props.handleUserLsData(sign, zipcode);
       this.props.history.push('/pawstrology');
     }
-
     catch (e) {
       this.setState({ error: e.response.body.error });
       this.state.error === 'email and password required' && alert('Please provide both an email and password.');

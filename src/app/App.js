@@ -118,4 +118,3 @@ render() {
 
 }
 
-// export default App;
