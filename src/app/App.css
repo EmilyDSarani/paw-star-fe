@@ -204,6 +204,16 @@ button:active, button:hover {
   gap: 25px;
 }
 
+.quote {
+  background-color: var(--platinum);
+  color: var(--oxford-blue);
+  padding: 10px;
+  font-style: italic;
+  letter-spacing: 1px;
+  border-radius: 5px;
+  text-transform: lowercase;
+}
+
 /*PETS page styles*/
 .pets-container {
   margin-top: 30px;
