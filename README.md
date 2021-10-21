@@ -1,20 +1,25 @@
 **Paw-Star**
-* Katie
-    *
-* Elijah
-    *
-* Diyana
-    *
-* Sarani
-    *
+- Katie Schrattenholzer
+    - [LinkedIn](https://www.linkedin.com/in/k-schrattenholzer/)
+    - [GitHub](https://github.com/k-schrattenholzer)
+- Elijah Prosperie
+    - [LinkedIn](https://www.linkedin.com/in/elijahprosperie/)
+    - [GitHub](https://github.com/ProsperieEli)
+- Diyana Mendoza
+    - [LinkedIn](https://www.linkedin.com/in/diyana-mendoza-price/)
+    - [GitHub](https://github.com/diyanamendoza)
+- Emily Sarani
+    - [LinkedIn](https://www.linkedin.com/in/emily-sarani-2b3074135/)
+    - [GitHub](https://github.com/EmilyDSarani)
 
-A description of the project
-- Allows the user to create a profile for themselves 
-- Add their pets 
-- Generate daily horoscope for each of those pets
+This app gives users a simple and straightforward way to look up their pet's signs and use their daily horoscope to understand their pet's mood at a glance. 
 
-The overall problem domain and how the project solves those problems:
-This app gives an easy for users to fine their pet's signs and understand their pet's mood at a glance. 
+User Story:
+- User logs in, or creates a user profile 
+- Redirected to the Pets page, where they can add their pet/s 
+- User directed to the paw-strology page to see a list of their pets, with each pets' daily horoscope, mood, and daily compatibility message
 
-A list of any libraries, frameworks, or packages that your application requires in order to properly function:
-React, Netlify, superagent 
+
+
+Libraries, frameworks, and packages used:
+- React, Netlify, superagent 
