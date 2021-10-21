@@ -27,3 +27,7 @@ export function getRandomQuote(array) {
   const randomCharacter = alphabet[Math.floor(Math.random() * alphabet.length)];
   return array.find(quote => quote.text.includes(randomCharacter) && quote.author !== 'Donald Trump');
 }
+
+export function sliceWordList(array){
+  return array.slice(1);
+}
