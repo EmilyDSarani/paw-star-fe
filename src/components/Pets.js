@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { HashLink } from 'react-router-hash-link';
 import { createPet, deletePet, getPets, getSign } from '../api-utils';
 
 export default class AddPet extends Component {
@@ -56,6 +57,7 @@ export default class AddPet extends Component {
                 <div className="one-pet" key={pet.id}> 
                   <img src={`../Icons/Pets/${pet.type}.png`} id='img' alt={pet.type} />
                   <p> {pet.name} | {pet.sign}</p>
+                  <HashLink to={`/pawstrology#${pet.id}`}><button className="to-chart">Pawstrology</button></HashLink>
                   <button className="delete-button" onClick={() => this.handleDelete(pet.id)}>Delete</button>
                 </div>
               )
