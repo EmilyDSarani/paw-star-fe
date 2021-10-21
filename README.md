@@ -1,11 +1,13 @@
-The name of the project
-We are Paw-Star
-Names of the team members
-A description of the project
-The overall problem domain and how the project solves those problems
-Semantic versioning, beginning with version 1.0.0 and incremented as changes are made
-A list of any libraries, frameworks, or packages that your application requires in order to properly function
-Instructions that the user may need to follow in order to get your application up and running on their own computer
-Clearly defined API endpoints with sample responses
-Clearly defined database schemas
+**Paw-Star**
+{Katie, Elijah, Diyana, Sarani}
 
+A description of the project
+- Allows the user to create a profile for themselves 
+- Add their pets 
+- Generate daily horoscope for each of those pets
+
+The overall problem domain and how the project solves those problems:
+This app gives an easy for users to fine their pet's signs and understand their pet's mood at a glance. 
+
+A list of any libraries, frameworks, or packages that your application requires in order to properly function:
+React, Netlify, superagent 
