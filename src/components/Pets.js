@@ -8,7 +8,6 @@ export default class AddPet extends Component {
     type: '',
     sign: '',
     pets: [],
-    hideUpdateForm: true,
     nameUpdate: '',
     birthdayUpdate: '',
     typeUpdate: ''
@@ -30,7 +29,6 @@ export default class AddPet extends Component {
       sign: this.state.sign,
       type: this.state.type
     };
-    // console.log(newPet);
     await createPet(newPet, this.props.token);
 
     this.props.history.push('/pawstrology');
@@ -38,7 +36,6 @@ export default class AddPet extends Component {
 
   handleSelect = async e => {
     await this.setState({ type: e.target.value });
-    // console.log(this.state.type);
   }
 
   handleDelete = async (id) => {
@@ -46,24 +43,6 @@ export default class AddPet extends Component {
     const pets = await getPets(this.props.token);
     await this.setState({ pets });
   }
-
-  // handleUpdate = async () => {
-  //   const sign = await getSign(this.state.birthdayUpdate);
-  //   await this.setState({ sign });
-  //   const update = {
-  //     name: this.state.nameUpdate,
-  //     sign: this.state.sign,
-  //   };
-  //   console.log(update);
-  //   await updatePet(this.state.petToUpdate, update, this.props.token);
-  //   const pets = await getPets(this.props.token);
-  //   await this.setState({ pets });
-  // }
-
-  // handleUpdateClick = () => {
-  //   this.setState({ hideUpdateForm: false });
-  // }
-  
 
   render() {
     const petsArray = this.state.pets;
