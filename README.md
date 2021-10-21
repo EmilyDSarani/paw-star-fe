@@ -1,50 +1,47 @@
-The name of the project
-We are Paw-Star
-Names of the team members
-A description of the project
-The overall problem domain and how the project solves those problems
-Semantic versioning, beginning with version 1.0.0 and incremented as changes are made
-A list of any libraries, frameworks, or packages that your application requires in order to properly function
-Instructions that the user may need to follow in order to get your application up and running on their own computer
-Clearly defined API endpoints with sample responses
-Clearly defined database schemas
+# Paw-Star
+### Elijah Prosperie
+- [LinkedIn](https://www.linkedin.com/in/elijahprosperie/)
+- [GitHub](https://github.com/ProsperieEli)
 
+### Katie Schrattenholzer
+- [LinkedIn](https://www.linkedin.com/in/k-schrattenholzer/)
+- [GitHub](https://github.com/k-schrattenholzer)
 
-# React Project
+### Diyana Mendoza
+- [LinkedIn](https://www.linkedin.com/in/diyana-mendoza-price/)
+- [GitHub](https://github.com/diyanamendoza)
+### Emily Sarani
+- [LinkedIn](https://www.linkedin.com/in/emily-sarani-2b3074135/)
+- [GitHub](https://github.com/EmilyDSarani)
+<br>
+<br>
 
-Basic template for starting a react project.
+### This app gives users a simple and straightforward way to look up their pet's signs and use their daily horoscope to understand their pet's mood at a glance. 
+<br>
 
+#### User Story:
+1. Login, or create a user profile 
+1. Redirect to the Pets page, where pets can be added 
+1. Directed to the paw-strology page to see a list of their pets, with a daily horoscope, mood, and compatibility message for each given pet
 
-n't forget to `npm i`!
+#### Endpoints:
+- Get
+- Post
+- Delete
 
-## Create React App 
+#### API's used:
+- [ZodiacSign](https://rapidapi.com/hajderr/api/zodiac-sign)
+- [Aztro](https://github.com/sameerkumar18/aztro)
+- [Yelp](https://www.yelp.com/developers/documentation/v3)
+- [Data Muse](https://www.datamuse.com/api/)
+- [Daily Quote](https://type.fit/api/quotes)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+#### Libraries, frameworks, and packages used:
+- React
+- React-Router-Dom
+- React-Loader-Spinner
+- React-Hash-Link
+- Netlify
+- superagent 
 
-### Available Scripts
-
-In the project directory, you can run:
-
-#### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-#### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-#### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
+Icons made by [Icongeek26](https://www.flaticon.com/authors/icongeek26) from https://www.flaticon.com/

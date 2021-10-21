@@ -39,6 +39,7 @@ export default class Gallery extends Component {
     const allWords = this.state.allWords;
     return (
       <div className="gallery-container">   
+
         { //is state still loading? 
           this.state.isLoading ?
           //if so, show the spinner
