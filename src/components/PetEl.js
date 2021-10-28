@@ -17,40 +17,44 @@ export default class PetEl extends Component {
   componentDidUpdate = async (prevProps) => {
     if (this.props.words.length !== prevProps.words.length) {
       const origArray = this.props.words;
+      // nice slicin'!
       const wordArrayOne = origArray.slice(0, Math.floor(origArray.length / 2));
       const wordArrayTwo = origArray.slice(Math.floor((origArray.length / 2) + 1));
 
-      const threeWordsDo = await getThreeWords(wordArrayOne);
-      await this.setState({ threeWordsDo });
-  
-      const threeWordsDont = await getThreeWords(wordArrayTwo);
-      await this.setState({ threeWordsDont });
+      // this will set it up so all the promises fire at the same time instead of having to go one by one. since the promises don't depend on each other, it should still work
+      const [threeWordsDo, threeWordsDont] = await Promise.all([
+        getThreeWords(wordArrayOne), 
+        getThreeWords(wordArrayTwo)
+      ]);
+
+      await this.setState({ threeWordsDont, threeWordsDo });
     }
   }
 
   render() {
-    const hData = this.state.horoscope;
+    const { compatibility, description, mood, color } = this.state.horoscope;
+    const { name, sign, type, id } = this.props;
     const userSign = localStorage.getItem('USERSIGN');
     const compatibilityMessage = compMessage(userSign, hData.compatibility);
     const doList = this.state.threeWordsDo;
     const dontList = this.state.threeWordsDont;
     return (
-      <div className="pet-el" id={this.props.id}>
+      <div className="pet-el" id={id}>
         
-        <img src={`../Icons/Pets/${this.props.type}.png`} id='img' alt={this.props.type} />
-        <h2>{this.props.name} is {correctArticle(this.props.sign)} {this.props.sign}</h2>
+        <img src={`../Icons/Pets/${type}.png`} id='img' alt={type} />
+        <h2>{name} is {correctArticle(sign)} {sign}</h2>
         <hr/>
 
-        <img className='smaller-images' src={`../Icons/ZodiacRep2/${this.props.sign}.png`} id='img' alt={this.props.sign}/>
+        <img className='smaller-images' src={`../Icons/ZodiacRep2/${sign}.png`} id='img' alt={sign}/>
         <h3>Today</h3>
-        <p>Mood: {hData.mood}</p>
-        <p>Color: {hData.color}</p>
-        <p>{this.props.name}'s BFF is {correctArticle(String(hData.compatibility))} {hData.compatibility}.</p>
+        <p>Mood: {mood}</p>
+        <p>Color: {color}</p>
+        <p>{name}'s BFF is {correctArticle(String(compatibility))} {compatibility}.</p>
         <hr/>
 
         <img className='smaller-images' src='../Icons/Pets/paws.png' alt='paw'/>
-        <h3>What {this.props.name} is paw-ndering today:</h3>
-        <p>{hData.description}</p>
+        <h3>What {name} is paw-ndering today:</h3>
+        <p>{description}</p>
         <hr/>
 
         <img className='smaller-images' src='../Icons/Pets/bell.png' alt='paw'/>
@@ -61,11 +65,11 @@ export default class PetEl extends Component {
         <div className="dos-donts">
           <div className="do-column">
             <h3>Do</h3>
-            {doList.length && doList.map(word => <p key={word.word}>{word.word}</p>)}
+            {doList.length && doList.map(({ word }) => <p key={word}>{word}</p>)}
           </div>
           <div className="dont-column">
             <h3>Don't</h3>
-            {dontList.map(word => <p key={word.word}>{word.word}</p>)}
+            {dontList.map(({ word }) => <p key={word}>{word}</p>)}
           </div>
         </div>
 

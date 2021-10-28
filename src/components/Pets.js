@@ -55,6 +55,7 @@ export default class AddPet extends Component {
                   <img src={`../Icons/Pets/${pet.type}.png`} id='img' alt={pet.type} />
                   <p> {pet.name} | {pet.sign}</p>
                   <HashLink to={`/pawstrology#${pet.id}`}><button className="to-chart">Pawstrology</button></HashLink>
+                  {/* nice work handling the dlete by passing an argument in an anonymous function--this is easy to get wrong! */}
                   <button className="delete-button" onClick={() => this.handleDelete(pet.id)}>Delete</button>
                 </div>
               )
