@@ -33,7 +33,8 @@ export default class HomePage extends Component {
         <form onSubmit={this.handleLogIn}>
           
           <h3>Welcome back</h3>
-
+          {/* might be nice to display the error since you're storing it in state anyhow */}
+          {this.state.error && <h2>{this.state.error} </h2>}
           <label>
             Email
             <input 

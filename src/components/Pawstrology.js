@@ -19,17 +19,18 @@ export default class Gallery extends Component {
   componentDidMount = async () => {
     this.setState({ isLoading: true });
 
-    const pets = await getPets(this.props.token);
-    await this.setState({ pets, isLoading: false });
+    // since these 3 are independent they can fire off at the same time
+    const [pets, quotes, allWords] = await Promise.all([
+      getPets(this.props.token),
+      getQuoteList(),
+      getRandomWords()
+    ])
 
-    const quotes = await getQuoteList();
-    await this.setState({ quotes });
+    await this.setState({ pets, quotes, allWords, isLoading: false });
 
+    // but this function has to wait until the quotes are fetched
     const quote = await getRandomQuote(this.state.quotes);
     await this.setState({ quote });
-
-    const allWords = await getRandomWords();
-    await this.setState({ allWords });
 
   }
 

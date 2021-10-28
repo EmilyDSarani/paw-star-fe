@@ -45,14 +45,14 @@ export async function deletePet(id, token) {
 
 
 //update pet...update is an object {name: blah, sign:blah}
-export async function updatePet(id, update, token) {
+export async function updatePet(id, {name, sign}, token) {
   const response = await request
     .put(`${URL}api/pets/${id}`)
     .set('Authorization', token)
     .send({
-      'id': id,
-      'name': update.name,
-      'sign': update.sign
+      id,
+      name,
+      sign
     });
   return response.body;
 }

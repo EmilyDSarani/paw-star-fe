@@ -16,6 +16,7 @@ import SignUp from '../components/SignUp';
 export default class App extends Component {
   state = {
     token: localStorage.getItem('TOKEN') || '',
+    // nice idea, holding onto all of this in state for the whole app to use. In career track you'll learn about Redux and the Context API as solutions for this kind of 'global application state'
     userSign: localStorage.getItem('USERSIGN') || '',
     userZip: localStorage.getItem('USERZIP') || ''
   }
