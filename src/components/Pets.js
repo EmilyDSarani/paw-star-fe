@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { HashLink } from 'react-router-hash-link';
-import { createPet, deletePet, getPets, getSign } from '../api-utils';
+import { createPet, deletePet, getPets } from '../api-utils';
 import { getZodiac } from '../utils.js';
 
 export default class AddPet extends Component {

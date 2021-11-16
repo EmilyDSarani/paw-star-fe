@@ -43,8 +43,9 @@ export function getThreeWords(array) {
   return threeWords;
 }
 
-//returns a zodiac sign when given a month/day
-//https://github.com/tindoductran/zodiac/blob/master/getZodiac2.html
+// returns a zodiac sign when given a month/day
+// https://github.com/tindoductran/zodiac/blob/master/getZodiac2.html
+
 export function getZodiac(month, day) {
   const datecode = month * 100 + day; //this will give us a number represent month and day
   if (datecode <= 120) {
