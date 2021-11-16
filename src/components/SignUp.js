@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { getSign, signUp } from '../api-utils';
+import { signUp } from '../api-utils';
+import { getZodiac } from '../utils.js';
 export default class SignUp extends Component {
     state = {
       password: '',
@@ -14,7 +15,13 @@ export default class SignUp extends Component {
       e.preventDefault();
 
       //take the submitted birthday as YYYY-MM-DD and give it to our getSign function
-      const sign = await getSign(this.state.birthday);
+      // const sign = await getSign(this.state.birthday);
+      const birthday = this.state.birthday;
+      const month = Number(birthday.split('-')[1]);
+      const day = Number(birthday.split('-')[2]);
+
+      const sign = getZodiac(month, day);
+ 
       //store the sign in state, so that we can give to our signUp function
       await this.setState({ sign });
 

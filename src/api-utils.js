@@ -58,11 +58,11 @@ export async function updatePet(id, update, token) {
 }
 
 //get sign
-export async function getSign(birthday){
-  const response = await request 
-    .get(`${URL}sign?date=${birthday}`);
-  return response.body;
-}
+// export async function getSign(birthday){
+//   const response = await request 
+//     .get(`${URL}sign?date=${birthday}`);
+//   return response.body;
+// }
 
 //get horoscope
 export async function getHoroscope(sign){
