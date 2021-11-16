@@ -24,8 +24,8 @@ export default class AddPet extends Component {
     // await this.setState({ sign });
 
     const birthday = this.state.birthday;
-    const month = birthday.split('-')[1];
-    const day = birthday.split('-')[2];
+    const month = Number(birthday.split('-')[1]);
+    const day = Number(birthday.split('-')[2]);
 
     const sign = getZodiac(month, day);
 
