@@ -235,6 +235,7 @@ button:active, button:hover {
   align-items: center;
   gap: 15px;
   margin-bottom: 30px;
+  width: 16em;
 }
 
 .pets-container img {
@@ -269,12 +270,32 @@ button:active, button:hover {
   flex-direction: column;
   align-items: center;
   gap: 15px;
+  width: 16em;
+}
+.addpet-container >* {
+  gap: 2em;
 }
 
 .addpet-form {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  gap: 5px;
+  align-items: flex-start;
+}
+
+.addpet-date {
+  display: flex;
+  flex-direction: column;
+}
+
+/* .addpet-form >* {
+ 
+} */
+
+.addpet-date >* * {
+  margin: 7px;
+  font-size: .4em;
+  align-content: center;
 }
 
 .delete-button {

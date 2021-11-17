@@ -6,7 +6,8 @@ import { getZodiac } from '../utils.js';
 export default class AddPet extends Component {
   state = {
     name: '',
-    birthday: '',
+    b_month: '',
+    b_day: '',
     type: '',
     sign: '',
     pets: [],
@@ -23,9 +24,8 @@ export default class AddPet extends Component {
     // const sign = await getSign(this.state.birthday);
     // await this.setState({ sign });
 
-    const birthday = this.state.birthday;
-    const month = Number(birthday.split('-')[1]);
-    const day = Number(birthday.split('-')[2]);
+    const month = Number(this.state.b_month);
+    const day = Number(this.state.b_month);
 
     const sign = getZodiac(month, day);
 
@@ -84,31 +84,53 @@ export default class AddPet extends Component {
             ))
           )}
         </div>
+
         <img src="../Icons/Pets/pet-bowl.png" alt="pet bowl" />
+
+        <h3>Add a Pet</h3>
+
         <div className="addpet-container">
-          <h3>Add a Pet</h3>
           <form className="addpet-form" onSubmit={this.handleSubmit}>
             <label>
-              Pet Name{' '}
+              <p>Pet Name</p>
+              <br />
               <input
                 value={this.state.name}
                 onChange={(e) => this.setState({ name: e.target.value })}
                 type="text"
               />
             </label>
-            <label>
-              Pet Birthday{' '}
-              <input
+
+            <label className="addpet-date">
+              <p>Pet Birthday</p>
+              <br />
+              {/* <input
                 value={this.state.birthday}
                 onChange={(e) => this.setState({ birthday: e.target.value })}
                 type="date"
-              />
+              /> */}
+              <div>
+                <p>month</p>
+                <input
+                  value={this.state.b_month}
+                  onChange={(e) => this.setState({ b_month: e.target.value })}
+                  type="number"
+                ></input>
+                <p>day</p>
+                <input
+                  value={this.state.b_day}
+                  onChange={(e) => this.setState({ b_day: e.target.value })}
+                  type="number"
+                ></input>
+              </div>
             </label>
+
             <select required onChange={this.handleSelect}>
               <option value="">Pet Type</option>
               <option value="dog">Dog</option>
               <option value="cat">Cat</option>
             </select>
+
             <button>Add Pet</button>
           </form>
         </div>
