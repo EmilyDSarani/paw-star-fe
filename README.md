@@ -15,10 +15,7 @@
 - [GitHub](https://github.com/EmilyDSarani)
 <br>
 <br>
-
-### This app gives users a simple and straightforward way to look up their pet's signs and use their daily horoscope to understand their pet's mood at a glance. 
-<br>
-
+   
 #### User Story:
 1. Login, or create a user profile 
 1. Redirect to the Pets page, where pets can be added 
@@ -30,6 +27,7 @@
 - Delete
 
 #### API's used:
+- [Backend Repo] (https://github.com/ProsperieEli/paw-star-be) 
 - [ZodiacSign](https://rapidapi.com/hajderr/api/zodiac-sign)
 - [Aztro](https://github.com/sameerkumar18/aztro)
 - [Yelp](https://www.yelp.com/developers/documentation/v3)
