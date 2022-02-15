@@ -27,7 +27,7 @@
 - Delete
 
 #### API's used:
-- [Backend Repo] (https://github.com/ProsperieEli/paw-star-be) 
+- [Backend Repo](https://github.com/ProsperieEli/paw-star-be) 
 - [ZodiacSign](https://rapidapi.com/hajderr/api/zodiac-sign)
 - [Aztro](https://github.com/sameerkumar18/aztro)
 - [Yelp](https://www.yelp.com/developers/documentation/v3)
