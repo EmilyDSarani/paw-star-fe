@@ -1,6 +1,6 @@
 import request from 'superagent';
 
-const URL = 'https://shielded-savannah-39977.herokuapp.com/';
+const URL = 'https://morning-escarpment-66902.herokuapp.com/';
 
 //sign up
 export async function signUp(email, password, sign, zipcode) {
@@ -58,11 +58,11 @@ export async function updatePet(id, update, token) {
 }
 
 //get sign
-export async function getSign(birthday){
-  const response = await request 
-    .get(`${URL}sign?date=${birthday}`);
-  return response.body;
-}
+// export async function getSign(birthday){
+//   const response = await request 
+//     .get(`${URL}sign?date=${birthday}`);
+//   return response.body;
+// }
 
 //get horoscope
 export async function getHoroscope(sign){
