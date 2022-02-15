@@ -92,7 +92,7 @@ export default class AddPet extends Component {
         <div className="addpet-container">
           <form className="addpet-form" onSubmit={this.handleSubmit}>
             <label>
-              <p>Pet Name</p>
+              <h6>Name</h6>
               <br />
               <input
                 value={this.state.name}
@@ -101,28 +101,24 @@ export default class AddPet extends Component {
               />
             </label>
 
-            <label className="addpet-date">
-              <p>Pet Birthday</p>
+            <label>
+              <h6>Birthday</h6>
               <br />
-              {/* <input
-                value={this.state.birthday}
-                onChange={(e) => this.setState({ birthday: e.target.value })}
-                type="date"
-              /> */}
-              <div>
-                <p>month</p>
-                <input
-                  value={this.state.b_month}
-                  onChange={(e) => this.setState({ b_month: e.target.value })}
-                  type="number"
-                ></input>
-                <p>day</p>
-                <input
-                  value={this.state.b_day}
-                  onChange={(e) => this.setState({ b_day: e.target.value })}
-                  type="number"
-                ></input>
-              </div>
+              <p>(month)</p>
+              <input
+                value={this.state.b_month}
+                onChange={(e) => this.setState({ b_month: e.target.value })}
+                type="number"
+              />
+            </label>
+
+            <label>
+              <p>(day)</p>
+              <input
+                value={this.state.b_day}
+                onChange={(e) => this.setState({ b_day: e.target.value })}
+                type="number"
+              />
             </label>
 
             <select required onChange={this.handleSelect}>

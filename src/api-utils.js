@@ -1,6 +1,6 @@
 import request from 'superagent';
 
-const URL = 'https://shielded-savannah-39977.herokuapp.com/';
+const URL = 'https://morning-escarpment-66902.herokuapp.com/';
 
 //sign up
 export async function signUp(email, password, sign, zipcode) {

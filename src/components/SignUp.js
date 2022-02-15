@@ -57,44 +57,59 @@ export default class SignUp extends Component {
           </p>
         </div>
         <form className="signup-form" onSubmit={this.handleSignUp}>
-          <label>
-            Email
-            <input
-              required
-              value={this.state.email}
-              onChange={(e) => this.setState({ email: e.target.value })}
-              type="email"
-            />
-          </label>
-
-          <label>
-            Password
-            <input
-              required
-              value={this.state.password}
-              onChange={(e) => this.setState({ password: e.target.value })}
-              type="password"
-            />
-          </label>
-          <label>
-            Current Zipcode
-            <input
-              required
-              value={this.state.zipcode}
-              onChange={(e) => this.setState({ zipcode: e.target.value })}
-              type="zipcode"
-            />
-          </label>
-          <label>
-            Your Birthday
-            <input
-              required
-              value={this.state.birthday}
-              onChange={(e) => this.setState({ birthday: e.target.value })}
-              type="date"
-            />
-            <p>(You'll enter your pet information next)</p>
-          </label>
+          <div className="signup-input">
+            <label>
+              Email
+              <input
+                required
+                value={this.state.email}
+                onChange={(e) => this.setState({ email: e.target.value })}
+                type="email"
+              />
+            </label>
+  
+            <label>
+              Password
+              <input
+                required
+                value={this.state.password}
+                onChange={(e) => this.setState({ password: e.target.value })}
+                type="password"
+              />
+            </label>
+            <label>
+              Current Zipcode
+              <input
+                required
+                value={this.state.zipcode}
+                onChange={(e) => this.setState({ zipcode: e.target.value })}
+                type="zipcode"
+              />
+            </label>
+            <label>
+              Your Birth Month
+              <input
+                required
+                value={this.state.b_month}
+                onChange={(e) => this.setState({ b_month: e.target.value })}
+                type="number"
+                min='1'
+                max='12'
+              />
+            </label>
+            <label>
+              Your Birth Day
+              <input
+                required
+                value={this.state.b_day}
+                onChange={(e) => this.setState({ b_day: e.target.value })}
+                type="number"
+                min='1'
+                max='31'
+              />
+              <p>(You'll enter your pet's information next)</p>
+            </label>
+          </div>
           <button>Submit</button>
         </form>
       </div>

@@ -17,10 +17,9 @@
 /*global styles*/
 h1 {
   font-family: var(--serif2);
-  font-size: larger;
-  font-weight: bolder;
   color: var(--platinum);
   letter-spacing: 1px;
+  font-size: 1.5em;
 }
 
 h2 {
@@ -32,13 +31,18 @@ h2 {
 h3 {
   font-family: var(--serif2);
   font-weight: bolder;
-  font-size: 1em;
+  font-size: 1.25em;
 }
 
 h4 {
   font-family: var(--monospace);
   font-size: .9em;
   text-align: center;
+}
+
+h6 {
+  text-align: center;
+  font-weight: 550;
 }
 
 p {
@@ -274,25 +278,24 @@ button:active, button:hover {
 }
 .addpet-container >* {
   gap: 2em;
+  text-align: center;
+  align-items: center;
+}
+
+.addpet-container >* p {
+  font:var(--serif2);
+  font-size: .3em;
+  font-weight: 595;
 }
 
 .addpet-form {
   display: flex;
   flex-direction: column;
-  gap: 5px;
-  align-items: flex-start;
+  gap: 15px;
+  align-items: center;
 }
 
-.addpet-date {
-  display: flex;
-  flex-direction: column;
-}
-
-/* .addpet-form >* {
- 
-} */
-
-.addpet-date >* * {
+.addpet-date >* p {
   margin: 7px;
   font-size: .4em;
   align-content: center;
@@ -347,6 +350,17 @@ button:active, button:hover {
   /*SIGNUP page styles*/
 .signup-container {
   margin-top: 30px;
+}
+
+.signup-form {
+  display: flex;
+}
+
+.signup-input {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 15px;
 }
 
 .welcome {
